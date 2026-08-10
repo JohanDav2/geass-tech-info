@@ -1716,154 +1716,116 @@
     }
 
 
-    /* ===== SOLUCIONES: ESTILO DE LA REFERENCIA ===== */
-    .solutions-section .solutions-grid {
-      width: 100%;
+    /* ===== FRANJA DEBAJO DEL BANNER =====
+       Estas son las 4 tarjetas/indicadores que están inmediatamente
+       después de .hero. No modifica las tarjetas de #soluciones. */
+    .trust {
+      background: #fff;
+      padding: 0 40px;
+      border-bottom: 1px solid #e1dcdd;
+      border-top: 1px solid #e1dcdd;
+    }
+
+    .trust-inner {
+      width: min(1160px, 100%);
+      min-height: 132px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      margin-top: 10px;
-      background: #fff;
-      border-top: 1px solid #ded8d9;
-      border-bottom: 1px solid #ded8d9;
-      box-shadow: none;
+      align-items: stretch;
     }
 
-    .solutions-section .solution-card,
-    .solutions-section .solution-featured {
-      min-height: 265px;
-      height: 265px;
-      padding: 24px 28px 28px;
-      background: #fff;
-      border: 0;
-      border-right: 1px solid #ded8d9;
-      border-radius: 0;
-      box-shadow: none;
+    .trust-item {
+      position: relative;
+      text-align: left;
+      padding: 24px 28px 21px 28px;
+      border-right: 1px solid #ded9da;
       display: flex;
       flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      transition: background .25s ease;
+      justify-content: center;
+      background: #fff;
+      transition: background .2s ease;
     }
 
-    .solutions-section .solution-card:last-child {
-      border-right: 0
+    .trust-item:first-child {
+      border-left: 1px solid #ded9da;
     }
 
-    .solutions-section .solution-card:hover {
-      transform: none;
-      background: #fdf9fa;
-      border-color: #ded8d9;
-      box-shadow: none;
+    .trust-item:hover {
+      background: #fcf8f9;
     }
 
-    .solutions-section .solution-number {
-      position: static;
+    .trust-item strong {
       display: block;
-      margin: 0 0 16px;
       color: #8c1724;
-      font-size: 48px;
+      font-size: 43px;
       line-height: .9;
-      font-weight: 900;
       letter-spacing: -.055em;
+      font-weight: 900;
+      margin-bottom: 10px;
     }
 
-    .solutions-section .solution-card h3,
-    .solutions-section .solution-featured h3 {
-      color: #201719;
-      font-size: 17px;
+    .trust-item span {
+      display: block;
+      color: #211719;
+      font-size: 14px;
       line-height: 1.2;
-      letter-spacing: -.025em;
-      max-width: 230px;
-      margin: 0 0 12px;
-    }
-
-    .solutions-section .solution-card p,
-    .solutions-section .solution-featured p {
-      color: #777178;
-      font-size: 12px;
-      line-height: 1.65;
-      max-width: 245px;
+      font-weight: 800;
+      letter-spacing: -.015em;
       margin: 0;
-      padding: 0;
-      border: 0;
     }
 
-    .solutions-section .solution-arrow {
-      position: absolute;
-      right: 24px;
-      bottom: 24px;
-      width: 34px;
-      height: 34px;
-      border: 1px solid #cda9ae;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #8c1724;
-      font-size: 16px;
-      line-height: 1;
-      background: #fff;
-      transition: .2s ease;
-    }
-
-    .solutions-section .solution-card:hover .solution-arrow {
-      color: #fff;
-      background: #8c1724;
-      border-color: #8c1724;
-    }
-
-    .solutions-section .solution-icon,
-    .solutions-section .solution-tags,
-    .solutions-section .solution-line,
-    .solutions-section .card-arrow {
-      display: none !important
-    }
-
-    .solutions-section .solution-featured {
-      grid-row: auto;
-      background: #fff;
-      color: #201719;
-      border-color: #ded8d9;
-    }
-
-    .solutions-section .solution-featured .solution-number {
-      color: #8c1724
+    .trust-item small {
+      display: block;
+      color: #777178;
+      font-size: 10px;
+      line-height: 1.45;
+      margin-top: 7px;
+      max-width: 205px;
     }
 
     @media(max-width:900px) {
-      .solutions-section .solutions-grid {
-        grid-template-columns: repeat(2, 1fr)
+      .trust {
+        padding: 0 20px;
       }
 
-      .solutions-section .solution-card:nth-child(2) {
-        border-right: 0
+      .trust-inner {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .solutions-section .solution-card:nth-child(1),
-      .solutions-section .solution-card:nth-child(2) {
-        border-bottom: 1px solid #ded8d9
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(1),
+      .trust-item:nth-child(2) {
+        border-bottom: 1px solid #ded9da;
       }
     }
 
     @media(max-width:560px) {
-      .solutions-section .solutions-grid {
-        grid-template-columns: 1fr
+      .trust {
+        padding: 0 18px;
       }
 
-      .solutions-section .solution-card,
-      .solutions-section .solution-featured {
-        height: auto;
-        min-height: 230px;
-        border-right: 0;
-        border-bottom: 1px solid #ded8d9;
+      .trust-inner {
+        grid-template-columns: 1fr;
       }
 
-      .solutions-section .solution-card:last-child {
-        border-bottom: 0
+      .trust-item,
+      .trust-item:first-child {
+        min-height: 118px;
+        border-left: 1px solid #ded9da;
+        border-right: 1px solid #ded9da;
+        border-bottom: 1px solid #ded9da;
       }
 
-      .solutions-section .solution-number {
-        font-size: 44px
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .trust-item strong {
+        font-size: 39px;
       }
     }
   </style>
@@ -1971,10 +1933,29 @@
 
     <section class="trust">
       <div class="trust-inner">
-        <div class="trust-item"><b>01</b><span>Sistemas empresariales</span></div>
-        <div class="trust-item"><b>02</b><span>Automatización de procesos</span></div>
-        <div class="trust-item"><b>03</b><span>Business Intelligence</span></div>
-        <div class="trust-item"><b>04</b><span>Inteligencia artificial</span></div>
+        <div class="trust-item">
+          <strong>01</strong>
+          <span>Sistemas empresariales</span>
+          <small>Soluciones para gestionar y centralizar la operación.</small>
+        </div>
+
+        <div class="trust-item">
+          <strong>02</strong>
+          <span>Automatización de procesos</span>
+          <small>Procesos más ágiles, trazables y eficientes.</small>
+        </div>
+
+        <div class="trust-item">
+          <strong>03</strong>
+          <span>Business Intelligence</span>
+          <small>Información clara para tomar mejores decisiones.</small>
+        </div>
+
+        <div class="trust-item">
+          <strong>04</strong>
+          <span>Inteligencia artificial</span>
+          <small>IA aplicada a las necesidades de tu organización.</small>
+        </div>
       </div>
     </section>
 
@@ -1993,31 +1974,55 @@
 
         <div class="solutions-grid">
           <article class="solution-card">
-            <div class="solution-number">01</div>
+            <div class="solution-top">
+              <span class="solution-number">01</span>
+              <span class="solution-icon">&lt;/&gt;</span>
+            </div>
             <h3>Sistemas empresariales</h3>
-            <p>Plataformas digitales para centralizar información, gestionar procesos y mejorar la operación.</p>
-            <span class="solution-arrow">↗</span>
+            <p>
+              Plataformas robustas y escalables para centralizar la información
+              y optimizar la gestión de tu organización.
+            </p>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-number">02</div>
+            <div class="solution-top">
+              <span class="solution-number">02</span>
+              <span class="solution-icon">⚡</span>
+            </div>
             <h3>Automatización de procesos</h3>
-            <p>Flujos inteligentes que reducen tareas repetitivas, tiempos operativos y errores.</p>
-            <span class="solution-arrow">↗</span>
+            <p>
+              Convertimos tareas repetitivas en flujos digitales eficientes
+              para reducir tiempos, errores y costos operativos.
+            </p>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-number">03</div>
+            <div class="solution-top">
+              <span class="solution-number">03</span>
+              <span class="solution-icon">◈</span>
+            </div>
             <h3>Business Intelligence</h3>
-            <p>Datos convertidos en indicadores, dashboards e información clara para decidir mejor.</p>
-            <span class="solution-arrow">↗</span>
+            <p>
+              Transformamos datos en información clara para visualizar
+              resultados y respaldar decisiones estratégicas.
+            </p>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-number">04</div>
+            <div class="solution-top">
+              <span class="solution-number">04</span>
+              <span class="solution-icon">✦</span>
+            </div>
             <h3>Inteligencia artificial</h3>
-            <p>IA aplicada al análisis, automatización y creación de nuevas capacidades empresariales.</p>
-            <span class="solution-arrow">↗</span>
+            <p>
+              Incorporamos IA para analizar información, automatizar tareas
+              y crear nuevas capacidades para tu empresa.
+            </p>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
         </div>
 
@@ -2120,4 +2125,3 @@
 </body>
 
 </html>
-```
