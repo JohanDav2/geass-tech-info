@@ -1367,6 +1367,168 @@
         text-align: center
       }
     }
+
+
+    /* ===== TARJETAS DE SOLUCIONES — DISEÑO CORPORATIVO ===== */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .solution-card,
+    .solution-featured {
+      min-height: 315px;
+      height: 315px;
+      padding: 28px 24px 25px;
+      background: #fff;
+      color: #1d1719;
+      border: 1px solid #e7e1e2;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 24px rgba(35, 13, 17, .055);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .solution-card:hover,
+    .solution-featured:hover {
+      transform: translateY(-5px);
+      border-color: #d9b8bd;
+      box-shadow: 0 18px 38px rgba(92, 20, 30, .12);
+    }
+
+    /* Todas las tarjetas tienen exactamente el mismo tratamiento */
+    .solution-featured {
+      grid-row: auto;
+      min-height: 315px;
+      height: 315px;
+      background: #fff;
+      border-color: #e7e1e2;
+      color: #1d1719;
+    }
+
+    .solution-number {
+      position: absolute;
+      top: 27px;
+      left: 126px;
+      margin: 0;
+      color: #b51f30;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .solution-icon {
+      width: 64px;
+      height: 64px;
+      min-width: 64px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      margin: 0 0 22px;
+      background: #fff0f2;
+      color: #b51f30;
+      border: 1px solid #f7dfe3;
+      box-shadow: none;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .solution-card h3,
+    .solution-featured h3 {
+      color: #161315;
+      font-size: 19px;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      margin: 0 42px 0 0;
+      max-width: 175px;
+    }
+
+    .solution-card p,
+    .solution-featured p {
+      color: #68646a;
+      font-size: 12.5px;
+      line-height: 1.65;
+      max-width: none;
+      margin: 26px 0 0;
+      padding-left: 14px;
+      border-left: 1px solid #ddd7d9;
+    }
+
+    .solution-tags,
+    .solution-line {
+      display: none;
+    }
+
+    .card-arrow {
+      position: absolute;
+      top: 28px;
+      right: 23px;
+      width: 39px;
+      height: 39px;
+      border: 1px solid #c13b4a;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #b51f30;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1;
+      background: #fff;
+      transition: .2s ease;
+    }
+
+    .solution-card:hover .card-arrow,
+    .solution-featured:hover .card-arrow {
+      background: #8c1724;
+      color: #fff;
+      border-color: #8c1724;
+    }
+
+    /* Mantiene el rojo elegante en lugar del tratamiento oscuro anterior */
+    .solution-featured .solution-number {
+      color: #b51f30;
+    }
+
+    .solution-featured .solution-icon {
+      background: #fff0f2;
+      color: #b51f30;
+    }
+
+    .solution-featured h3 {
+      color: #161315;
+    }
+
+    .solution-featured p {
+      color: #68646a;
+    }
+
+    @media(max-width:1000px) {
+      .solutions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media(max-width:560px) {
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solution-card,
+      .solution-featured {
+        height: auto;
+        min-height: 290px;
+      }
+
+      .solution-number {
+        left: 110px;
+      }
+    }
   </style>
 </head>
 
