@@ -1529,6 +1529,191 @@
         left: 110px;
       }
     }
+
+
+    /* ===== SOLUCIONES — ESTILO EDITORIAL / ESTADÍSTICAS ===== */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      background: #fff;
+      border-top: 1px solid #ded9da;
+      border-bottom: 1px solid #ded9da;
+      box-shadow: 0 12px 35px rgba(28, 14, 17, .045);
+    }
+
+    .solution-card {
+      min-height: 290px;
+      padding: 28px 30px 25px;
+      background: #fff;
+      border: 0;
+      border-right: 1px solid #ded9da;
+      border-radius: 0;
+      box-shadow: none;
+      position: relative;
+      overflow: hidden;
+      transition: background .25s ease, transform .25s ease;
+    }
+
+    .solution-card:last-child {
+      border-right: 0;
+    }
+
+    .solution-card:hover {
+      transform: none;
+      background: #fcf8f9;
+      border-color: #ded9da;
+      box-shadow: none;
+    }
+
+    .solution-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: 72px;
+      margin-bottom: 20px;
+    }
+
+    .solution-number {
+      display: block;
+      color: #8c1724;
+      font-size: 46px;
+      line-height: .9;
+      font-weight: 900;
+      letter-spacing: -.055em;
+      margin: 0;
+    }
+
+    .solution-icon {
+      width: 43px;
+      height: 43px;
+      min-width: 43px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      background: #fff;
+      color: #8c1724;
+      border: 1px solid #d7b2b7;
+      box-shadow: none;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .solution-card h3,
+    .solution-featured h3 {
+      color: #211619;
+      font-size: 18px;
+      line-height: 1.18;
+      letter-spacing: -.025em;
+      margin: 0 0 13px;
+      max-width: 220px;
+    }
+
+    .solution-card p,
+    .solution-featured p {
+      color: #747078;
+      font-size: 12px;
+      line-height: 1.65;
+      max-width: 235px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .solution-link {
+      position: absolute;
+      left: 30px;
+      bottom: 22px;
+      color: #8c1724;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      opacity: .88;
+    }
+
+    .solution-link b {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 14px;
+      transition: transform .2s ease;
+    }
+
+    .solution-card:hover .solution-link b {
+      transform: translateX(4px);
+    }
+
+    .solution-tags,
+    .solution-line,
+    .card-arrow {
+      display: none !important;
+    }
+
+    .solution-featured {
+      grid-row: auto;
+      min-height: 290px;
+      background: #fff;
+      border-color: #ded9da;
+      color: #211619;
+    }
+
+    .solution-featured .solution-number {
+      color: #8c1724;
+    }
+
+    .solution-featured .solution-icon {
+      background: #fff;
+      color: #8c1724;
+      border-color: #d7b2b7;
+    }
+
+    .solution-featured h3 {
+      color: #211619;
+    }
+
+    .solution-featured p {
+      color: #747078;
+    }
+
+    @media(max-width:900px) {
+      .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .solution-card {
+        border-bottom: 1px solid #ded9da;
+      }
+
+      .solution-card:nth-child(2) {
+        border-right: 0;
+      }
+
+      .solution-card:nth-child(3),
+      .solution-card:nth-child(4) {
+        border-bottom: 0;
+      }
+    }
+
+    @media(max-width:560px) {
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solution-card,
+      .solution-featured {
+        min-height: 255px;
+        border-right: 0;
+        border-bottom: 1px solid #ded9da;
+      }
+
+      .solution-card:last-child {
+        border-bottom: 0;
+      }
+
+      .solution-number {
+        font-size: 42px;
+      }
+    }
   </style>
 </head>
 
@@ -1655,56 +1840,56 @@
         </div>
 
         <div class="solutions-grid">
-          <article class="solution-card solution-featured">
-            <div class="solution-number">01</div>
-            <div class="solution-icon">&lt;/&gt;</div>
-            <div>
-              <h3>Plataformas empresariales</h3>
-              <p>
-                Sistemas centralizados para administrar procesos, usuarios, documentos,
-                indicadores y operaciones desde una experiencia moderna.
-              </p>
-              <div class="solution-tags">
-                <span>Gestión</span><span>Escalable</span><span>Centralizada</span>
-              </div>
+          <article class="solution-card">
+            <div class="solution-top">
+              <span class="solution-number">01</span>
+              <span class="solution-icon">&lt;/&gt;</span>
             </div>
-            <span class="card-arrow">↗</span>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-number">02</div>
-            <div class="solution-icon">⚡</div>
-            <h3>Automatización</h3>
+            <h3>Sistemas empresariales</h3>
             <p>
-              Transformamos tareas repetitivas en flujos digitales eficientes,
-              reduciendo tiempos y mejorando la trazabilidad.
+              Plataformas robustas y escalables para centralizar la información
+              y optimizar la gestión de tu organización.
             </p>
-            <div class="solution-line"></div>
-            <span class="card-arrow">↗</span>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-number">03</div>
-            <div class="solution-icon">◈</div>
-            <h3>Datos &amp; Business Intelligence</h3>
+            <div class="solution-top">
+              <span class="solution-number">02</span>
+              <span class="solution-icon">⚡</span>
+            </div>
+            <h3>Automatización de procesos</h3>
             <p>
-              Dashboards e indicadores que convierten datos dispersos en información
-              clara para respaldar decisiones estratégicas.
+              Convertimos tareas repetitivas en flujos digitales eficientes
+              para reducir tiempos, errores y costos operativos.
             </p>
-            <div class="solution-line"></div>
-            <span class="card-arrow">↗</span>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-number">04</div>
-            <div class="solution-icon">✦</div>
+            <div class="solution-top">
+              <span class="solution-number">03</span>
+              <span class="solution-icon">◈</span>
+            </div>
+            <h3>Business Intelligence</h3>
+            <p>
+              Transformamos datos en información clara para visualizar
+              resultados y respaldar decisiones estratégicas.
+            </p>
+            <span class="solution-link">Conocer solución <b>→</b></span>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-top">
+              <span class="solution-number">04</span>
+              <span class="solution-icon">✦</span>
+            </div>
             <h3>Inteligencia artificial</h3>
             <p>
-              Incorporamos IA donde realmente aporta valor: búsqueda inteligente,
-              análisis de información y asistencia para procesos empresariales.
+              Incorporamos IA para analizar información, automatizar tareas
+              y crear nuevas capacidades para tu empresa.
             </p>
-            <div class="solution-line"></div>
-            <span class="card-arrow">↗</span>
+            <span class="solution-link">Conocer solución <b>→</b></span>
           </article>
         </div>
 
