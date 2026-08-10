@@ -1714,6 +1714,158 @@
         font-size: 42px;
       }
     }
+
+
+    /* ===== SOLUCIONES: ESTILO DE LA REFERENCIA ===== */
+    .solutions-section .solutions-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 10px;
+      background: #fff;
+      border-top: 1px solid #ded8d9;
+      border-bottom: 1px solid #ded8d9;
+      box-shadow: none;
+    }
+
+    .solutions-section .solution-card,
+    .solutions-section .solution-featured {
+      min-height: 265px;
+      height: 265px;
+      padding: 24px 28px 28px;
+      background: #fff;
+      border: 0;
+      border-right: 1px solid #ded8d9;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: background .25s ease;
+    }
+
+    .solutions-section .solution-card:last-child {
+      border-right: 0
+    }
+
+    .solutions-section .solution-card:hover {
+      transform: none;
+      background: #fdf9fa;
+      border-color: #ded8d9;
+      box-shadow: none;
+    }
+
+    .solutions-section .solution-number {
+      position: static;
+      display: block;
+      margin: 0 0 16px;
+      color: #8c1724;
+      font-size: 48px;
+      line-height: .9;
+      font-weight: 900;
+      letter-spacing: -.055em;
+    }
+
+    .solutions-section .solution-card h3,
+    .solutions-section .solution-featured h3 {
+      color: #201719;
+      font-size: 17px;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+      max-width: 230px;
+      margin: 0 0 12px;
+    }
+
+    .solutions-section .solution-card p,
+    .solutions-section .solution-featured p {
+      color: #777178;
+      font-size: 12px;
+      line-height: 1.65;
+      max-width: 245px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .solutions-section .solution-arrow {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      width: 34px;
+      height: 34px;
+      border: 1px solid #cda9ae;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #8c1724;
+      font-size: 16px;
+      line-height: 1;
+      background: #fff;
+      transition: .2s ease;
+    }
+
+    .solutions-section .solution-card:hover .solution-arrow {
+      color: #fff;
+      background: #8c1724;
+      border-color: #8c1724;
+    }
+
+    .solutions-section .solution-icon,
+    .solutions-section .solution-tags,
+    .solutions-section .solution-line,
+    .solutions-section .card-arrow {
+      display: none !important
+    }
+
+    .solutions-section .solution-featured {
+      grid-row: auto;
+      background: #fff;
+      color: #201719;
+      border-color: #ded8d9;
+    }
+
+    .solutions-section .solution-featured .solution-number {
+      color: #8c1724
+    }
+
+    @media(max-width:900px) {
+      .solutions-section .solutions-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .solutions-section .solution-card:nth-child(2) {
+        border-right: 0
+      }
+
+      .solutions-section .solution-card:nth-child(1),
+      .solutions-section .solution-card:nth-child(2) {
+        border-bottom: 1px solid #ded8d9
+      }
+    }
+
+    @media(max-width:560px) {
+      .solutions-section .solutions-grid {
+        grid-template-columns: 1fr
+      }
+
+      .solutions-section .solution-card,
+      .solutions-section .solution-featured {
+        height: auto;
+        min-height: 230px;
+        border-right: 0;
+        border-bottom: 1px solid #ded8d9;
+      }
+
+      .solutions-section .solution-card:last-child {
+        border-bottom: 0
+      }
+
+      .solutions-section .solution-number {
+        font-size: 44px
+      }
+    }
   </style>
 </head>
 
@@ -1841,55 +1993,31 @@
 
         <div class="solutions-grid">
           <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">01</span>
-              <span class="solution-icon">&lt;/&gt;</span>
-            </div>
+            <div class="solution-number">01</div>
             <h3>Sistemas empresariales</h3>
-            <p>
-              Plataformas robustas y escalables para centralizar la información
-              y optimizar la gestión de tu organización.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
+            <p>Plataformas digitales para centralizar información, gestionar procesos y mejorar la operación.</p>
+            <span class="solution-arrow">↗</span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">02</span>
-              <span class="solution-icon">⚡</span>
-            </div>
+            <div class="solution-number">02</div>
             <h3>Automatización de procesos</h3>
-            <p>
-              Convertimos tareas repetitivas en flujos digitales eficientes
-              para reducir tiempos, errores y costos operativos.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
+            <p>Flujos inteligentes que reducen tareas repetitivas, tiempos operativos y errores.</p>
+            <span class="solution-arrow">↗</span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">03</span>
-              <span class="solution-icon">◈</span>
-            </div>
+            <div class="solution-number">03</div>
             <h3>Business Intelligence</h3>
-            <p>
-              Transformamos datos en información clara para visualizar
-              resultados y respaldar decisiones estratégicas.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
+            <p>Datos convertidos en indicadores, dashboards e información clara para decidir mejor.</p>
+            <span class="solution-arrow">↗</span>
           </article>
 
           <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">04</span>
-              <span class="solution-icon">✦</span>
-            </div>
+            <div class="solution-number">04</div>
             <h3>Inteligencia artificial</h3>
-            <p>
-              Incorporamos IA para analizar información, automatizar tareas
-              y crear nuevas capacidades para tu empresa.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
+            <p>IA aplicada al análisis, automatización y creación de nuevas capacidades empresariales.</p>
+            <span class="solution-arrow">↗</span>
           </article>
         </div>
 
@@ -1992,3 +2120,4 @@
 </body>
 
 </html>
+```
