@@ -707,667 +707,6 @@
       }
     }
 
-    /* ===== GEASS TECH / SECCIONES CORPORATIVAS ===== */
-    .solutions-section {
-      position: relative;
-      background: #f7f5f5;
-      padding: 105px 30px 90px;
-      overflow: hidden;
-    }
-
-    .solutions-section:before {
-      content: "";
-      position: absolute;
-      width: 520px;
-      height: 520px;
-      right: -260px;
-      top: -230px;
-      border-radius: 50%;
-      border: 1px solid rgba(140, 23, 36, .09);
-    }
-
-    .solutions-container,
-    .technology-container,
-    .company-container,
-    .cta-container {
-      width: min(1160px, 100%);
-      margin: auto;
-    }
-
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 48px
-    }
-
-    .section-kicker {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      color: #8c1724;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .section-kicker span {
-      width: 25px;
-      height: 2px;
-      background: #c13b4a;
-      display: inline-block;
-    }
-
-    .section-heading h2,
-    .technology-copy h2,
-    .company-section h2,
-    .cta-section h2 {
-      color: #17171a;
-      font-size: 43px;
-      line-height: 1.08;
-      letter-spacing: -.045em;
-    }
-
-    .section-heading h2 em,
-    .technology-copy h2 em,
-    .cta-section h2 em {
-      color: #8c1724;
-      font-style: normal;
-    }
-
-    .section-heading p {
-      margin-top: 17px;
-      color: #687080;
-      max-width: 690px;
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 1fr 1fr;
-      gap: 16px;
-    }
-
-    .solution-card {
-      min-height: 265px;
-      background: #fff;
-      border: 1px solid #e6e1e2;
-      border-radius: 14px;
-      padding: 27px;
-      position: relative;
-      overflow: hidden;
-      transition: .25s ease;
-      box-shadow: 0 12px 30px rgba(32, 17, 20, .035);
-    }
-
-    .solution-card:hover {
-      transform: translateY(-4px);
-      border-color: #cba3a8;
-      box-shadow: 0 18px 40px rgba(88, 20, 29, .10);
-    }
-
-    .solution-featured {
-      grid-row: span 2;
-      min-height: 546px;
-      background: linear-gradient(145deg, #160a0d 0%, #280e14 70%, #16090c 100%);
-      border-color: #3d171d;
-      color: #fff;
-    }
-
-    .solution-featured h3 {
-      color: #fff
-    }
-
-    .solution-featured p {
-      color: #c9bec1
-    }
-
-    .solution-number {
-      color: #b9aeb1;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      margin-bottom: 25px;
-    }
-
-    .solution-featured .solution-number {
-      color: #c13b4a
-    }
-
-    .solution-icon {
-      width: 45px;
-      height: 45px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: linear-gradient(135deg, #c13b4a, #7b111d);
-      font-size: 19px;
-      font-weight: 900;
-      margin-bottom: 25px;
-      box-shadow: 0 8px 20px rgba(140, 23, 36, .16);
-    }
-
-    .solution-card h3 {
-      color: #211519;
-      font-size: 20px;
-      line-height: 1.2;
-      margin-bottom: 11px;
-      letter-spacing: -.025em;
-    }
-
-    .solution-card p {
-      color: #707681;
-      font-size: 13px;
-      line-height: 1.7;
-      max-width: 430px;
-    }
-
-    .solution-featured p {
-      max-width: 420px
-    }
-
-    .solution-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 28px;
-    }
-
-    .solution-tags span {
-      border: 1px solid rgba(255, 255, 255, .14);
-      background: rgba(255, 255, 255, .05);
-      color: #ddd4d6;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 9px;
-      font-weight: 800;
-    }
-
-    .solution-line {
-      position: absolute;
-      left: 27px;
-      right: 27px;
-      bottom: 25px;
-      height: 1px;
-      background: #eee7e8;
-    }
-
-    .card-arrow {
-      position: absolute;
-      right: 25px;
-      bottom: 22px;
-      color: #8c1724;
-      font-size: 19px;
-      font-weight: 700;
-    }
-
-    .solution-featured .card-arrow {
-      color: #e04055
-    }
-
-    .capabilities {
-      margin-top: 55px;
-      border-top: 1px solid #ddd7d8;
-      border-bottom: 1px solid #ddd7d8;
-      padding: 24px 0;
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      align-items: center;
-      gap: 35px;
-    }
-
-    .capabilities-label span {
-      display: block;
-      color: #8c1724;
-      font-size: 9px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      margin-bottom: 5px;
-    }
-
-    .capabilities-label strong {
-      font-size: 15px;
-      color: #25171a
-    }
-
-    .capability-list {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .capability-list div {
-      color: #5f626a;
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .capability-list b {
-      color: #c13b4a;
-      margin-right: 5px;
-      font-size: 9px;
-    }
-
-    .technology-section {
-      background: #fff;
-      padding: 110px 30px;
-      border-top: 1px solid #eee8e9;
-    }
-
-    .technology-container {
-      display: grid;
-      grid-template-columns: 1fr .92fr;
-      gap: 85px;
-      align-items: center;
-    }
-
-    .technology-copy h2 {
-      max-width: 570px
-    }
-
-    .technology-copy>p {
-      color: #6d727d;
-      max-width: 590px;
-      line-height: 1.75;
-      font-size: 14px;
-      margin: 18px 0 30px;
-    }
-
-    .tech-points {
-      display: grid;
-      gap: 14px
-    }
-
-    .tech-points div {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      align-items: center;
-      column-gap: 10px;
-    }
-
-    .tech-points span {
-      grid-row: span 2;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #f4e7e9;
-      color: #8c1724;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .tech-points strong {
-      font-size: 12px;
-      color: #26181b
-    }
-
-    .tech-points small {
-      color: #878b94;
-      font-size: 10px;
-      margin-top: 2px
-    }
-
-    .technology-panel {
-      background: #10090b;
-      border-radius: 18px;
-      min-height: 430px;
-      padding: 22px;
-      color: #fff;
-      box-shadow: 0 25px 65px rgba(39, 10, 15, .18);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .technology-panel:before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      right: -130px;
-      bottom: -150px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(193, 59, 74, .30), transparent 70%);
-    }
-
-    .panel-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #8e8789;
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: .12em;
-    }
-
-    .panel-status {
-      letter-spacing: 0;
-      color: #bdb4b7;
-      font-weight: 700
-    }
-
-    .panel-status i {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #65c985;
-      margin-right: 5px;
-      box-shadow: 0 0 8px rgba(101, 201, 133, .5);
-    }
-
-    .panel-title {
-      margin-top: 45px;
-      text-align: center;
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: -.02em;
-    }
-
-    .ecosystem {
-      height: 250px;
-      position: relative;
-      margin-top: 20px;
-    }
-
-    .ecosystem:before,
-    .ecosystem:after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      border: 1px solid rgba(193, 59, 74, .25);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .ecosystem:before {
-      width: 145px;
-      height: 145px
-    }
-
-    .ecosystem:after {
-      width: 245px;
-      height: 245px;
-      border-color: rgba(255, 255, 255, .07)
-    }
-
-    .eco-center {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #c13b4a, #72111b);
-      font-size: 19px;
-      font-weight: 900;
-      z-index: 2;
-      box-shadow: 0 0 35px rgba(193, 59, 74, .3);
-    }
-
-    .eco-item {
-      position: absolute;
-      background: #1b1013;
-      border: 1px solid #392126;
-      border-radius: 9px;
-      padding: 9px 12px;
-      min-width: 105px;
-      z-index: 3;
-    }
-
-    .eco-item b {
-      display: block;
-      font-size: 10px
-    }
-
-    .eco-item small {
-      color: #8d8588;
-      font-size: 8px
-    }
-
-    .eco-a {
-      left: 5px;
-      top: 40px
-    }
-
-    .eco-b {
-      right: 5px;
-      top: 40px
-    }
-
-    .eco-c {
-      left: 5px;
-      bottom: 35px
-    }
-
-    .eco-d {
-      right: 5px;
-      bottom: 35px
-    }
-
-    .panel-footer {
-      border-top: 1px solid #2a2022;
-      padding-top: 13px;
-      display: flex;
-      justify-content: space-between;
-      color: #837a7d;
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .company-section {
-      background: #f7f5f5;
-      padding: 85px 30px;
-      border-top: 1px solid #e8e1e2;
-    }
-
-    .company-container {
-      display: grid;
-      grid-template-columns: 90px 1fr 280px;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .company-mark {
-      width: 76px;
-      height: 76px;
-      border-radius: 18px;
-      background: #170b0e;
-      color: #e04055;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 22px;
-      box-shadow: inset 0 0 0 1px #482027;
-    }
-
-    .company-section h2 {
-      font-size: 31px
-    }
-
-    .company-section p {
-      max-width: 680px;
-      color: #6e737c;
-      line-height: 1.7;
-      font-size: 13px;
-      margin-top: 9px;
-    }
-
-    .company-stat {
-      border-left: 1px solid #d8d0d2;
-      padding-left: 25px;
-    }
-
-    .company-stat strong {
-      display: block;
-      color: #8c1724;
-      font-size: 20px;
-      margin-bottom: 5px;
-    }
-
-    .company-stat span {
-      color: #777c84;
-      font-size: 10px;
-      line-height: 1.6
-    }
-
-    .cta-section {
-      background: #10090b;
-      color: #fff;
-      padding: 85px 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-glow {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      right: -190px;
-      top: -220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(193, 59, 74, .30), transparent 68%);
-    }
-
-    .cta-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-section .section-kicker {
-      color: #d5aeb4
-    }
-
-    .cta-section h2 {
-      color: #fff;
-      max-width: 680px
-    }
-
-    .cta-section p {
-      color: #b8abad;
-      max-width: 650px;
-      line-height: 1.7;
-      font-size: 13px;
-      margin-top: 14px;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 10px;
-      flex-shrink: 0
-    }
-
-    .btn-dark-outline {
-      background: transparent;
-      color: #fff;
-      border: 1px solid #594044;
-    }
-
-    @media(max-width:900px) {
-      .solutions-grid {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .solution-featured {
-        grid-row: auto;
-        min-height: 390px
-      }
-
-      .technology-container {
-        grid-template-columns: 1fr;
-        gap: 45px
-      }
-
-      .company-container {
-        grid-template-columns: 70px 1fr
-      }
-
-      .company-stat {
-        grid-column: 2;
-        border-left: 0;
-        border-top: 1px solid #d8d0d2;
-        padding: 18px 0 0
-      }
-
-      .cta-container {
-        flex-direction: column;
-        align-items: flex-start
-      }
-    }
-
-    @media(max-width:560px) {
-
-      .solutions-section,
-      .technology-section,
-      .company-section,
-      .cta-section {
-        padding-left: 20px;
-        padding-right: 20px
-      }
-
-      .section-heading h2,
-      .technology-copy h2,
-      .cta-section h2 {
-        font-size: 33px
-      }
-
-      .solutions-grid {
-        grid-template-columns: 1fr
-      }
-
-      .solution-featured {
-        min-height: 350px
-      }
-
-      .capabilities {
-        grid-template-columns: 1fr;
-        gap: 20px
-      }
-
-      .capability-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr
-      }
-
-      .company-container {
-        grid-template-columns: 1fr
-      }
-
-      .company-mark {
-        width: 60px;
-        height: 60px
-      }
-
-      .company-stat {
-        grid-column: auto
-      }
-
-      .cta-actions {
-        width: 100%;
-        flex-direction: column
-      }
-
-      .cta-actions .btn {
-        width: 100%;
-        text-align: center
-      }
-    }
-
 
     /* ===== TARJETAS DE SOLUCIONES — DISEÑO CORPORATIVO ===== */
     .solutions-grid {
@@ -2485,6 +1824,279 @@
         max-width: 430px;
       }
     }
+
+
+    /* ===== BANNER SIMPLE + FAQ ===== */
+    .brand-banner {
+      position: relative;
+      overflow: hidden;
+      background: #10090b;
+      color: #fff;
+      padding: 58px 30px;
+      border-top: 1px solid #281316;
+      border-bottom: 1px solid #281316;
+    }
+
+    .brand-banner-glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -160px;
+      top: -210px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(193, 59, 74, .28), transparent 68%);
+    }
+
+    .brand-banner-inner {
+      width: min(1120px, 100%);
+      margin: auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 76px 1fr auto;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .brand-banner-mark {
+      width: 68px;
+      height: 68px;
+      border-radius: 17px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #c13b4a, #71121d);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(140, 23, 36, .24);
+    }
+
+    .brand-banner-kicker,
+    .faq-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #c88992;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .brand-banner-kicker span,
+    .faq-kicker span {
+      width: 21px;
+      height: 2px;
+      background: #c13b4a;
+    }
+
+    .brand-banner-copy h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .brand-banner-copy h2 em {
+      color: #e04055;
+      font-style: normal;
+    }
+
+    .brand-banner-copy p {
+      margin: 10px 0 0;
+      max-width: 650px;
+      color: #b9adb0;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .brand-banner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 17px;
+      border: 1px solid #6d3b43;
+      border-radius: 5px;
+      color: #fff;
+      background: rgba(255, 255, 255, .025);
+      font-size: 10px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: .2s ease;
+    }
+
+    .brand-banner-btn span {
+      color: #e04055;
+      font-size: 17px;
+    }
+
+    .brand-banner-btn:hover {
+      background: #8c1724;
+      border-color: #8c1724;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .faq-section {
+      background: #faf8f8;
+      padding: 78px 30px 85px;
+    }
+
+    .faq-heading {
+      width: min(720px, 100%);
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .faq-kicker {
+      justify-content: center;
+      color: #8c1724;
+    }
+
+    .faq-heading h2 {
+      color: #211719;
+      font-size: 35px;
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+
+    .faq-heading h2 em {
+      color: #8c1724;
+      font-style: normal;
+    }
+
+    .faq-heading p {
+      color: #777178;
+      font-size: 12px;
+      line-height: 1.65;
+      margin: 10px auto 0;
+    }
+
+    .faq-list {
+      width: min(820px, 100%);
+      margin: auto;
+      border-top: 1px solid #ddd7d8;
+    }
+
+    .faq-list details {
+      border-bottom: 1px solid #ddd7d8;
+      background: #fff;
+    }
+
+    .faq-list summary {
+      list-style: none;
+      cursor: pointer;
+      min-height: 60px;
+      padding: 0 19px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #26181b;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary b {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: #8c1724;
+      border: 1px solid #d4b4b8;
+      font-size: 16px;
+      font-weight: 500;
+      transition: .2s ease;
+    }
+
+    .faq-list details[open] summary b {
+      color: #fff;
+      background: #8c1724;
+      border-color: #8c1724;
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 60px 18px 19px;
+      color: #777178;
+      font-size: 10.5px;
+      line-height: 1.65;
+      max-width: 730px;
+    }
+
+    .faq-footer {
+      width: min(820px, 100%);
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #8a8386;
+      font-size: 10px;
+    }
+
+    .faq-footer a {
+      color: #8c1724;
+      font-weight: 900;
+    }
+
+    @media(max-width:760px) {
+      .brand-banner {
+        padding: 45px 20px;
+      }
+
+      .brand-banner-inner {
+        grid-template-columns: 1fr;
+        gap: 17px;
+      }
+
+      .brand-banner-mark {
+        width: 54px;
+        height: 54px;
+      }
+
+      .brand-banner-copy h2 {
+        font-size: 27px;
+      }
+
+      .brand-banner-btn {
+        justify-self: start;
+      }
+
+      .faq-section {
+        padding: 60px 20px 65px;
+      }
+
+      .faq-heading h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .faq-list summary {
+        min-height: 64px;
+        padding: 0 14px;
+      }
+
+      .faq-answer {
+        padding-left: 14px;
+        padding-right: 40px;
+      }
+
+      .faq-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+      }
+    }
   </style>
 </head>
 
@@ -2649,6 +2261,24 @@
               <p>Dashboards, indicadores y datos centralizados para visualizar lo que realmente importa.</p>
             </div>
           </article>
+
+          <article class="showcase-card showcase-side">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=85"
+              alt="Profesionales desarrollando tecnología">
+            <div class="showcase-overlay">
+              <span>03 · INNOVACIÓN</span>
+              <h3>Procesos preparados para evolucionar</h3>
+            </div>
+          </article>
+
+          <article class="showcase-card showcase-side showcase-hidden">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85"
+              alt="Tecnología y desarrollo">
+            <div class="showcase-overlay">
+              <span>04 · TECNOLOGÍA</span>
+              <h3>Construimos soluciones digitales</h3>
+            </div>
+          </article>
         </div>
 
         <button class="showcase-control next" aria-label="Siguiente">›</button>
@@ -2753,180 +2383,101 @@
           <a href="#tecnologia" class="editorial-plus" aria-label="Conocer más">+</a>
         </article>
 
-        <article class="editorial-card editorial-wide">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=88"
-            alt="Profesionales trabajando con tecnología">
-          <div class="editorial-overlay">
-            <span>04 · INNOVACIÓN</span>
-            <h3>Preparados para el siguiente nivel.</h3>
-            <p>Automatización e inteligencia artificial aplicadas donde realmente generan valor.</p>
-          </div>
-          <a href="#contacto" class="editorial-plus" aria-label="Conocer más">+</a>
-        </article>
+
       </div>
     </section>
 
 
 
 
-    <section class="solutions-section" id="soluciones">
-      <div class="solutions-container">
 
-        <div class="section-heading">
-          <div class="section-kicker"><span></span> Soluciones empresariales</div>
-          <h2>Una tecnología diseñada para <em>hacer avanzar</em> tu organización</h2>
-          <p>
-            En Geass Tech desarrollamos soluciones digitales que conectan procesos,
-            información y personas para convertir la operación diaria en una ventaja estratégica.
-          </p>
-        </div>
+    <!-- ===== PREGUNTAS FRECUENTES ===== -->
+    <section class="faq-section" id="preguntas">
+      <div class="faq-heading">
+        <div class="faq-kicker"><span></span> Preguntas frecuentes</div>
+        <h2>Lo esencial, <em>en un solo lugar</em></h2>
+        <p>Respuestas rápidas sobre Geass Tech y nuestras soluciones digitales.</p>
+      </div>
 
-        <div class="solutions-grid">
-          <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">01</span>
-              <span class="solution-icon">&lt;/&gt;</span>
-            </div>
-            <h3>Sistemas empresariales</h3>
-            <p>
-              Plataformas robustas y escalables para centralizar la información
-              y optimizar la gestión de tu organización.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">02</span>
-              <span class="solution-icon">⚡</span>
-            </div>
-            <h3>Automatización de procesos</h3>
-            <p>
-              Convertimos tareas repetitivas en flujos digitales eficientes
-              para reducir tiempos, errores y costos operativos.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">03</span>
-              <span class="solution-icon">◈</span>
-            </div>
-            <h3>Business Intelligence</h3>
-            <p>
-              Transformamos datos en información clara para visualizar
-              resultados y respaldar decisiones estratégicas.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
-          </article>
-
-          <article class="solution-card">
-            <div class="solution-top">
-              <span class="solution-number">04</span>
-              <span class="solution-icon">✦</span>
-            </div>
-            <h3>Inteligencia artificial</h3>
-            <p>
-              Incorporamos IA para analizar información, automatizar tareas
-              y crear nuevas capacidades para tu empresa.
-            </p>
-            <span class="solution-link">Conocer solución <b>→</b></span>
-          </article>
-        </div>
-
-        <div class="capabilities">
-          <div class="capabilities-label">
-            <span>Capacidades</span>
-            <strong>Un ecosistema digital conectado</strong>
+      <div class="faq-list">
+        <details open>
+          <summary>
+            <span>¿Qué es Geass Tech?</span>
+            <b>+</b>
+          </summary>
+          <div class="faq-answer">
+            Geass Tech es una empresa de tecnología enfocada en desarrollar soluciones
+            digitales para optimizar procesos, centralizar información y facilitar la gestión empresarial.
           </div>
-          <div class="capability-list">
-            <div><b>01</b> Gestión documental</div>
-            <div><b>02</b> Indicadores y dashboards</div>
-            <div><b>03</b> Automatización de procesos</div>
-            <div><b>04</b> Integraciones y APIs</div>
-            <div><b>05</b> Control y trazabilidad</div>
+        </details>
+
+        <details>
+          <summary>
+            <span>¿Qué tipo de soluciones desarrollan?</span>
+            <b>+</b>
+          </summary>
+          <div class="faq-answer">
+            Desarrollamos sistemas empresariales, automatización de procesos,
+            herramientas de Business Intelligence e implementaciones de inteligencia artificial.
           </div>
-        </div>
+        </details>
+
+        <details>
+          <summary>
+            <span>¿Las soluciones pueden adaptarse a nuestra empresa?</span>
+            <b>+</b>
+          </summary>
+          <div class="faq-answer">
+            Sí. Diseñamos las soluciones de acuerdo con los procesos, necesidades y objetivos
+            específicos de cada organización.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span>¿Pueden integrar nuestros sistemas actuales?</span>
+            <b>+</b>
+          </summary>
+          <div class="faq-answer">
+            Podemos plantear integraciones mediante APIs y otros mecanismos de conexión,
+            buscando mantener la información sincronizada y reducir tareas manuales.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span>¿Cómo puedo empezar con Geass Tech?</span>
+            <b>+</b>
+          </summary>
+          <div class="faq-answer">
+            Puedes contactarnos para revisar tu necesidad y definir el alcance de una solución
+            que tenga sentido para tu operación.
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-footer">
+        <span>¿Tienes otra pregunta?</span>
+        <a href="mailto:contacto@geasstech.com">Hablemos →</a>
       </div>
     </section>
 
-    <section class="technology-section" id="tecnologia">
-      <div class="technology-container">
-        <div class="technology-copy">
-          <div class="section-kicker"><span></span> Tecnología con propósito</div>
-          <h2>Construimos sistemas que <em>evolucionan contigo</em></h2>
+    <!-- ===== BANNER DE MARCA ===== -->
+    <section class="brand-banner" id="contacto">
+      <div class="brand-banner-glow"></div>
+      <div class="brand-banner-inner">
+        <div class="brand-banner-mark">GT</div>
+        <div class="brand-banner-copy">
+          <div class="brand-banner-kicker"><span></span> GEASS TECH</div>
+          <h2>La tecnología que impulsa <em>tu siguiente paso.</em></h2>
           <p>
-            Cada solución se plantea para crecer junto a la organización:
-            arquitectura modular, interfaces intuitivas, datos centralizados
-            y herramientas preparadas para nuevas necesidades.
-          </p>
-
-          <div class="tech-points">
-            <div><span>✓</span><strong>Arquitectura modular</strong><small>Crece por etapas sin perder control.</small>
-            </div>
-            <div><span>✓</span><strong>Experiencia de usuario</strong><small>Interfaces claras para facilitar la
-                adopción.</small></div>
-            <div><span>✓</span><strong>Información centralizada</strong><small>Una visión más completa de la
-                operación.</small></div>
-          </div>
-        </div>
-
-        <div class="technology-panel">
-          <div class="panel-header">
-            <span>GEASS TECH</span>
-            <span class="panel-status"><i></i> Plataforma activa</span>
-          </div>
-          <div class="panel-title">Ecosistema empresarial</div>
-          <div class="ecosystem">
-            <div class="eco-center">GT</div>
-            <div class="eco-item eco-a"><b>Procesos</b><small>Automatización</small></div>
-            <div class="eco-item eco-b"><b>Datos</b><small>Inteligencia</small></div>
-            <div class="eco-item eco-c"><b>Personas</b><small>Experiencia</small></div>
-            <div class="eco-item eco-d"><b>Gestión</b><small>Trazabilidad</small></div>
-          </div>
-          <div class="panel-footer">
-            <span>Software</span><span>Data</span><span>IA</span><span>Integraciones</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="company-section" id="empresa">
-      <div class="company-container">
-        <div class="company-mark">GT</div>
-        <div>
-          <div class="section-kicker"><span></span> Nuestra empresa</div>
-          <h2>Geass Tech</h2>
-          <p>
-            Somos una empresa de tecnología enfocada en transformar la manera en que
-            las organizaciones administran sus procesos, centralizan la información
-            y utilizan sus datos para tomar mejores decisiones.
+            Soluciones digitales pensadas para simplificar procesos, conectar información
+            y convertir los retos de tu organización en oportunidades.
           </p>
         </div>
-        <div class="company-stat">
-          <strong>Digital</strong>
-          <span>Soluciones pensadas para el presente y preparadas para el futuro.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section" id="contacto">
-      <div class="cta-glow"></div>
-      <div class="cta-container">
-        <div>
-          <div class="section-kicker"><span></span> Hablemos de tecnología</div>
-          <h2>Tu próximo proceso optimizado <em>puede empezar hoy.</em></h2>
-          <p>
-            Cuéntanos qué quieres mejorar. En Geass Tech convertimos necesidades
-            empresariales en soluciones digitales concretas.
-          </p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="mailto:contacto@geasstech.com">Contactar</a>
-          <a class="btn btn-dark-outline" href="https://johandav2.github.io/Geass-Tech/login.html">Ingresar a la
-            plataforma</a>
-        </div>
+        <a class="brand-banner-btn" href="https://johandav2.github.io/Geass-Tech/login.html">
+          Ingresar a la plataforma <span>→</span>
+        </a>
       </div>
     </section>
   </main>
@@ -2990,3 +2541,4 @@
 </body>
 
 </html>
+```
