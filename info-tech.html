@@ -2109,6 +2109,216 @@
         right: 22px;
       }
     }
+
+
+    /* ===== MOSAICO EDITORIAL DE IMÁGENES ===== */
+    .editorial-section {
+      background: #f3eeee;
+      padding: 88px 24px 95px;
+      overflow: hidden;
+    }
+
+    .editorial-heading {
+      max-width: 980px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .editorial-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #8c1724;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+    }
+
+    .editorial-kicker span {
+      width: 24px;
+      height: 2px;
+      background: #c13b4a;
+    }
+
+    .editorial-heading h2 {
+      color: #24101a;
+      font-size: 38px;
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .editorial-heading h2 em {
+      color: #8c1724;
+      font-style: normal;
+    }
+
+    .editorial-heading p {
+      max-width: 700px;
+      margin: 13px auto 0;
+      color: #766d71;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .editorial-grid {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 270px 270px;
+      gap: 14px;
+    }
+
+    .editorial-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 7px;
+      background: #18090d;
+      min-width: 0;
+      box-shadow: 0 10px 28px rgba(40, 13, 18, .09);
+    }
+
+    .editorial-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .55s ease;
+    }
+
+    .editorial-card:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 5, 7, .08) 25%, rgba(11, 5, 7, .88) 100%);
+    }
+
+    .editorial-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .editorial-large {
+      grid-row: 1 / 3;
+    }
+
+    .editorial-top,
+    .editorial-bottom {
+      grid-column: 2;
+    }
+
+    .editorial-overlay {
+      position: absolute;
+      z-index: 2;
+      left: 24px;
+      right: 24px;
+      bottom: 23px;
+      color: #fff;
+    }
+
+    .editorial-overlay span {
+      display: block;
+      color: #e3a5ad;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      margin-bottom: 8px;
+    }
+
+    .editorial-overlay h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -.035em;
+      max-width: 530px;
+    }
+
+    .editorial-overlay p {
+      margin: 9px 0 0;
+      color: #ddd3d5;
+      font-size: 11px;
+      line-height: 1.55;
+      max-width: 520px;
+    }
+
+    .editorial-top .editorial-overlay h3,
+    .editorial-bottom .editorial-overlay h3 {
+      font-size: 18px;
+      max-width: 420px;
+    }
+
+    .editorial-plus {
+      position: absolute;
+      z-index: 4;
+      right: 18px;
+      bottom: 18px;
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #8c1724;
+      color: #fff;
+      font-size: 19px;
+      font-weight: 300;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(50, 5, 12, .22);
+      transition: .2s ease;
+    }
+
+    .editorial-plus:hover {
+      background: #c13b4a;
+      transform: scale(1.08);
+      color: #fff;
+    }
+
+    @media(max-width:760px) {
+      .editorial-section {
+        padding: 65px 18px 70px;
+      }
+
+      .editorial-heading h2 {
+        font-size: 31px;
+      }
+
+      .editorial-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px);
+      }
+
+      .editorial-large,
+      .editorial-top,
+      .editorial-bottom,
+      .editorial-wide {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+
+    @media(max-width:480px) {
+      .editorial-heading h2 {
+        font-size: 28px;
+      }
+
+      .editorial-grid {
+        grid-template-rows: repeat(4, 220px);
+      }
+
+      .editorial-overlay {
+        left: 18px;
+        right: 18px;
+      }
+
+      .editorial-overlay h3,
+      .editorial-top .editorial-overlay h3,
+      .editorial-bottom .editorial-overlay h3 {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 
@@ -2303,6 +2513,63 @@
         <button aria-label="Slide 4"></button>
       </div>
     </section>
+
+    <!-- ===== SECCIÓN EDITORIAL / CAPACIDADES ===== -->
+    <section class="editorial-section" id="capacidades">
+      <div class="editorial-heading">
+        <div class="editorial-kicker"><span></span> El ecosistema Geass Tech</div>
+        <h2>Todo lo que necesitas para <em>transformar tu empresa</em></h2>
+        <p>
+          Tecnología, datos y automatización trabajando juntos para crear una operación
+          más conectada, eficiente y preparada para crecer.
+        </p>
+      </div>
+
+      <div class="editorial-grid">
+        <article class="editorial-card editorial-large">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=88"
+            alt="Equipo empresarial colaborando">
+          <div class="editorial-overlay">
+            <span>01 · COLABORACIÓN</span>
+            <h3>Personas conectadas.</h3>
+            <p>Una experiencia digital pensada para que los equipos trabajen con mayor claridad.</p>
+          </div>
+          <a href="#contacto" class="editorial-plus" aria-label="Conocer más">+</a>
+        </article>
+
+        <article class="editorial-card editorial-top">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=88"
+            alt="Equipo desarrollando soluciones digitales">
+          <div class="editorial-overlay">
+            <span>02 · SOFTWARE</span>
+            <h3>Soluciones construidas para tu operación.</h3>
+          </div>
+          <a href="#soluciones" class="editorial-plus" aria-label="Conocer más">+</a>
+        </article>
+
+        <article class="editorial-card editorial-bottom">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=88"
+            alt="Reunión estratégica de empresa">
+          <div class="editorial-overlay">
+            <span>03 · ESTRATEGIA</span>
+            <h3>Información que se convierte en decisiones.</h3>
+          </div>
+          <a href="#tecnologia" class="editorial-plus" aria-label="Conocer más">+</a>
+        </article>
+
+        <article class="editorial-card editorial-wide">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=88"
+            alt="Profesionales trabajando con tecnología">
+          <div class="editorial-overlay">
+            <span>04 · INNOVACIÓN</span>
+            <h3>Preparados para el siguiente nivel.</h3>
+            <p>Automatización e inteligencia artificial aplicadas donde realmente generan valor.</p>
+          </div>
+          <a href="#contacto" class="editorial-plus" aria-label="Conocer más">+</a>
+        </article>
+      </div>
+    </section>
+
 
 
 
@@ -2527,3 +2794,4 @@
 </body>
 
 </html>
+```
