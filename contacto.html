@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Contacta con Geass Tech y conversemos sobre soluciones digitales para tu empresa.">
+  <title>Contacto | Geass Tech</title>
+
+  <style>
+    :root{
+      --black:#09090b;
+      --black2:#10090b;
+      --red:#8c1724;
+      --red2:#c13b4a;
+      --red3:#e04055;
+      --paper:#f8f6f6;
+      --white:#fff;
+      --text:#211719;
+      --muted:#777178;
+      --line:#ded8d9;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--paper);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* NAVBAR */
+    .nav{
+      height:76px;
+      padding:0 38px;
+      background:#fff;
+      border-bottom:1px solid #e6e1e2;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:relative;
+      z-index:10;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      color:#171315;
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:-.035em;
+    }
+    .brand-mark{
+      width:32px;height:32px;border-radius:9px;
+      display:grid;place-items:center;
+      color:#fff;
+      background:linear-gradient(135deg,var(--red2),var(--red));
+      font-size:10px;font-weight:900;
+      box-shadow:0 7px 18px rgba(140,23,36,.18);
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:30px;
+      margin-left:auto;
+      margin-right:28px;
+    }
+    .nav-links a{
+      color:#575053;
+      font-size:11px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active{color:var(--red)}
+    .login{
+      border:1px solid #8c1724;
+      border-radius:4px;
+      padding:10px 16px;
+      color:#fff;
+      background:#8c1724;
+      font-size:10px;
+      font-weight:900;
+      transition:.2s ease;
+      box-shadow:0 7px 18px rgba(140,23,36,.18);
+    }
+    .login:hover{
+      background:#a5202f;
+      border-color:#a5202f;
+      color:#fff;
+      transform:translateY(-1px);
+      box-shadow:0 10px 22px rgba(140,23,36,.24);
+    }
+    .login:hover{
+      background:var(--red);
+      border-color:var(--red);
+      color:#fff;
+    }
+
+    /* HERO — MISMA LÍNEA VISUAL DE LA LANDING */
+    .hero{
+      min-height:475px;
+      background:
+        radial-gradient(circle at 82% 42%,rgba(140,23,36,.34),transparent 31%),
+        linear-gradient(115deg,#09090b 0%,#10090b 58%,#160a0e 100%);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid #32161c;
+    }
+
+    .hero-glow{
+      position:absolute;
+      width:560px;
+      height:560px;
+      right:-185px;
+      top:-205px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(193,59,74,.28),transparent 67%);
+      pointer-events:none;
+    }
+
+    .hero-ring{
+      position:absolute;
+      width:610px;
+      height:610px;
+      right:-235px;
+      top:-235px;
+      border:1px solid rgba(193,59,74,.14);
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      width:min(1140px,100%);
+      margin:auto;
+      padding:82px 30px 70px;
+      display:grid;
+      grid-template-columns:1fr .45fr;
+      gap:70px;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-main{
+      max-width:760px;
+    }
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:9px;
+      color:#d09aa2;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+
+    .eyebrow span{
+      width:25px;
+      height:2px;
+      background:#c13b4a;
+    }
+
+    .hero h1{
+      max-width:760px;
+      margin:0;
+      color:#fff;
+      font-size:clamp(48px,5.8vw,74px);
+      line-height:.93;
+      letter-spacing:-.065em;
+      font-weight:850;
+    }
+
+    .hero h1 em{
+      color:#d94254;
+      font-style:normal;
+    }
+
+    .hero-copy{
+      max-width:620px;
+      color:#b5aaad;
+      font-size:13px;
+      line-height:1.75;
+      margin-top:21px;
+    }
+
+    .hero-actions{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      margin-top:27px;
+    }
+
+    .hero-primary{
+      display:inline-flex;
+      align-items:center;
+      gap:13px;
+      background:#8c1724;
+      color:#fff;
+      border:1px solid #8c1724;
+      border-radius:4px;
+      padding:12px 16px;
+      font-size:9px;
+      font-weight:900;
+      transition:.2s ease;
+    }
+
+    .hero-primary span{
+      font-size:14px;
+    }
+
+    .hero-primary:hover{
+      background:#a5202f;
+      border-color:#a5202f;
+      transform:translateY(-1px);
+    }
+
+    .hero-secondary{
+      color:#aaa0a3;
+      font-size:9px;
+      font-weight:800;
+      border-bottom:1px solid #66565a;
+      padding-bottom:3px;
+      transition:.2s ease;
+    }
+
+    .hero-secondary:hover{
+      color:#fff;
+      border-color:#c13b4a;
+    }
+
+    .hero-side{
+      min-height:235px;
+      border-left:1px solid #4d2b31;
+      padding-left:26px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .hero-side-number{
+      color:#c13b4a;
+      font-size:45px;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:-.06em;
+    }
+
+    .hero-side-line{
+      width:100%;
+      height:1px;
+      background:linear-gradient(90deg,#6c343c,transparent);
+      margin:18px 0 21px;
+    }
+
+    .hero-side p{
+      max-width:220px;
+      color:#877b7f;
+      font-size:11px;
+      line-height:1.65;
+    }
+
+    .hero-side p strong{
+      display:block;
+      color:#eee8e9;
+      font-size:14px;
+      line-height:1.35;
+      margin-top:3px;
+    }
+
+    .hero-side-meta{
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      margin-top:28px;
+      padding-top:13px;
+      border-top:1px solid #302024;
+      color:#645a5d;
+      font-size:7px;
+      font-weight:900;
+      letter-spacing:.15em;
+    }
+
+    .hero-bottom{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      height:32px;
+      border-top:1px solid rgba(255,255,255,.065);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 max(30px,calc((100% - 1080px)/2));
+      color:#62575a;
+      font-size:7px;
+      font-weight:900;
+      letter-spacing:.18em;
+      z-index:3;
+    }
+
+    /* CONTACTO — DISEÑO ENTERPRISE */
+    .contact{
+      background:#f5f3f3;
+      padding:92px 30px 105px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .contact:before{
+      content:"";
+      position:absolute;
+      width:500px;
+      height:500px;
+      left:-300px;
+      top:120px;
+      border-radius:50%;
+      border:1px solid rgba(140,23,36,.08);
+    }
+
+    .contact-shell{
+      width:min(1160px,100%);
+      margin:auto;
+      display:grid;
+      grid-template-columns:.86fr 1.14fr;
+      gap:75px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+
+    .contact-intro{
+      padding-right:5px;
+    }
+
+    .contact-intro .kicker{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:17px;
+    }
+
+    .contact-intro .kicker span{
+      display:inline-block;
+      width:24px;
+      height:2px;
+      background:#c13b4a;
+    }
+
+    .contact-intro h2{
+      max-width:510px;
+      color:#1c1517;
+      font-size:42px;
+      line-height:1.03;
+      letter-spacing:-.052em;
+      margin:0;
+    }
+
+    .contact-intro h2 em{
+      color:#8c1724;
+      font-style:normal;
+    }
+
+    .contact-intro>p{
+      max-width:500px;
+      color:#706a6d;
+      font-size:13px;
+      line-height:1.78;
+      margin-top:18px;
+    }
+
+    .contact-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      margin-top:37px;
+      border-top:1px solid #dcd6d7;
+      border-bottom:1px solid #dcd6d7;
+    }
+
+    .contact-stats>div{
+      min-height:105px;
+      padding:17px 14px 15px 0;
+      border-right:1px solid #dcd6d7;
+    }
+
+    .contact-stats>div+div{
+      padding-left:16px;
+    }
+
+    .contact-stats>div:last-child{
+      border-right:0;
+    }
+
+    .contact-stats strong{
+      display:block;
+      color:#8c1724;
+      font-size:26px;
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .contact-stats span{
+      display:block;
+      color:#24181a;
+      font-size:10px;
+      font-weight:900;
+      margin-top:8px;
+    }
+
+    .contact-stats small{
+      display:block;
+      color:#898184;
+      font-size:8px;
+      line-height:1.45;
+      margin-top:4px;
+    }
+
+    .details{
+      margin-top:28px;
+      border-top:1px solid #dcd6d7;
+    }
+
+    .detail{
+      display:grid;
+      grid-template-columns:37px 1fr;
+      gap:12px;
+      align-items:center;
+      padding:15px 0;
+      border-bottom:1px solid #dcd6d7;
+    }
+
+    .detail-icon{
+      width:29px;
+      height:29px;
+      border-radius:8px;
+      display:grid;
+      place-items:center;
+      color:#8c1724;
+      background:#f3e5e7;
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .detail label{
+      display:block;
+      color:#958b8e;
+      font-size:7px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:4px;
+    }
+
+    .detail strong{
+      color:#2a1b1e;
+      font-size:10px;
+      line-height:1.4;
+    }
+
+    .detail a:hover{
+      color:#8c1724;
+    }
+
+    .available{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#7c7477;
+      font-size:8px;
+      margin-top:18px;
+    }
+
+    .available i{
+      width:7px;
+      height:7px;
+      flex:none;
+      border-radius:50%;
+      background:#5cae76;
+      box-shadow:0 0 0 4px rgba(92,174,118,.10);
+    }
+
+    /* FORM CARD */
+    .form-card{
+      position:relative;
+      background:linear-gradient(145deg,#8c1724 0%,#73121d 58%,#5f0f18 100%);
+      border:1px solid #9e2634;
+      padding:37px 38px 31px;
+      box-shadow:0 25px 55px rgba(73,8,17,.22);
+      overflow:hidden;
+      color:#fff;
+    }
+
+    .form-accent{
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:3px;
+      background:linear-gradient(90deg,#f3a0aa,#fff,#d85b68);
+    }
+
+    .form-card:after{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      right:-190px;
+      bottom:-210px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 0 0 35px rgba(255,255,255,.025);
+      pointer-events:none;
+    }
+
+    .form-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:20px;
+      padding:0 0 20px;
+      margin:0;
+      border-bottom:1px solid rgba(255,255,255,.18);
+    }
+
+    .form-label{
+      display:block;
+      color:#f2a0a9;
+      font-size:8px;
+      font-weight:900;
+      letter-spacing:.15em;
+      margin-bottom:7px;
+    }
+
+    .form-head h2{
+      color:#fff;
+      font-size:23px;
+      line-height:1.1;
+      letter-spacing:-.04em;
+      margin:0;
+    }
+
+    .form-code{
+      color:rgba(255,255,255,.52);
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.12em;
+      padding-top:3px;
+    }
+
+    .form-description{
+      color:rgba(255,255,255,.72);
+      font-size:10px;
+      line-height:1.6;
+      max-width:570px;
+      margin:17px 0 24px;
+    }
+
+    .fields{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:19px 16px;
+    }
+
+    .field.full{
+      grid-column:1/-1;
+    }
+
+    .field label{
+      display:block;
+      color:#fff;
+      font-size:8px;
+      font-weight:900;
+      margin-bottom:7px;
+      letter-spacing:.01em;
+    }
+
+    .field label b{
+      color:#8c1724;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.70);
+      background:#fff;
+      color:#25181b;
+      border-radius:2px;
+      outline:none;
+      padding:12px 13px;
+      font-size:10px;
+      transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+    }
+
+    .field input,
+    .field select{
+      height:42px;
+    }
+
+    .field textarea{
+      min-height:122px;
+      resize:vertical;
+      line-height:1.55;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder{
+      color:#9a9294;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      background:#fff;
+      border-color:#fff;
+      box-shadow:0 0 0 3px rgba(255,255,255,.18);
+    }
+
+    .form-bottom{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:25px;
+      margin-top:24px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.18);
+    }
+
+    .privacy span{
+      display:block;
+      color:#f2a0a9;
+      font-size:7px;
+      font-weight:900;
+      letter-spacing:.13em;
+      margin-bottom:4px;
+    }
+
+    .privacy p{
+      max-width:300px;
+      color:rgba(255,255,255,.62);
+      font-size:8px;
+      line-height:1.5;
+    }
+
+    .send{
+      min-width:145px;
+      border:1px solid rgba(255,255,255,.75);
+      border-radius:3px;
+      padding:13px 18px;
+      background:#fff;
+      color:#8c1724;
+      font-size:9px;
+      font-weight:900;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .send span{
+      font-size:15px;
+    }
+
+    .send:hover{
+      background:#f7e9eb;
+      color:#6e111c;
+      transform:translateY(-2px);
+      box-shadow:0 9px 20px rgba(48,4,10,.20);
+    }
+
+    /* FOOTER BANNER */
+    .footer-banner{
+      background:var(--black2);
+      color:#fff;
+      padding:55px 30px;
+      position:relative;
+      overflow:hidden;
+    }
+    .footer-banner:after{
+      content:"";
+      position:absolute;
+      width:480px;height:480px;
+      right:-150px;top:-250px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(193,59,74,.25),transparent 68%);
+    }
+    .footer-inner{
+      width:min(1140px,100%);
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:35px;
+      position:relative;
+      z-index:2;
+    }
+    .footer-kicker{
+      color:#c88992;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .footer-banner h2{
+      color:#fff;
+      font-size:29px;
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+    .footer-banner h2 em{color:var(--red3);font-style:normal}
+    .footer-banner p{
+      max-width:650px;
+      color:#a99da0;
+      font-size:11px;
+      line-height:1.65;
+      margin-top:9px;
+    }
+    .footer-btn{
+      border:1px solid #693942;
+      border-radius:4px;
+      padding:12px 16px;
+      color:#fff;
+      font-size:9px;
+      font-weight:900;
+      white-space:nowrap;
+      transition:.2s ease;
+    }
+    .footer-btn:hover{
+      background:var(--red);
+      border-color:var(--red);
+    }
+    footer{
+      background:#09090b;
+      color:#81777a;
+      padding:20px 30px;
+      font-size:9px;
+    }
+    .copyright{
+      width:min(1140px,100%);
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    @media(max-width:950px){
+      .nav-links{gap:16px;margin-right:15px}
+      .hero-inner{grid-template-columns:1fr;gap:42px}
+      .hero-side{max-width:360px;min-height:175px}
+      .contact-shell{grid-template-columns:1fr;gap:55px}
+      .contact-intro h2{max-width:700px}
+      .contact-intro>p{max-width:650px}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+
+    @media(max-width:600px){
+      .nav{height:68px;padding:0 18px}
+      .nav-links{display:none}
+      .hero-inner{padding:60px 20px}
+      .hero-side{padding-left:18px}
+      .contact{padding:60px 20px 70px}
+      .form{padding:23px 19px}
+      .form-head{display:block}
+      .form-head p{text-align:left;margin-top:8px}
+      .fields{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .form-bottom{display:block}
+      .send{width:100%;justify-content:center;margin-top:15px}
+      .footer-banner{padding:45px 20px}
+      .copyright{display:block}
+      .copyright span+span{display:block;margin-top:7px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">GT</span>
+      <span>GEASS TECH</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#soluciones">Soluciones</a>
+      <a href="index.html#experiencia">Experiencia</a>
+      <a class="active" href="contacto.html">Contacto</a>
+    </nav>
+
+    <a class="login" href="https://johandav2.github.io/Geass-Tech/login.html">
+      Iniciar sesión
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-ring"></div>
+
+      <div class="hero-inner">
+        <div class="hero-main">
+          <div class="eyebrow"><span></span> GEASS TECH / CONTACTO</div>
+
+          <h1>
+            Hablemos sobre<br>
+            <em>tu próximo proyecto.</em>
+          </h1>
+
+          <p class="hero-copy">
+            Cuéntanos qué quieres mejorar, automatizar o construir.
+            En Geass Tech convertimos necesidades empresariales en
+            soluciones digitales concretas, modernas y escalables.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#formulario" class="hero-primary">Cuéntanos tu proyecto <span>→</span></a>
+            <a href="index.html" class="hero-secondary">Volver al inicio</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="hero-side-number">01</div>
+          <div class="hero-side-line"></div>
+          <p>
+            Tecnología pensada alrededor de tu operación.
+            <strong>El siguiente paso comienza con una conversación.</strong>
+          </p>
+          <div class="hero-side-meta">
+            <span>GEASS TECH</span>
+            <span>COLOMBIA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>CONTACTO</span>
+        <span>GEASS TECH</span>
+      </div>
+    </section>
+
+
+    <section class="contact" id="formulario">
+      <div class="contact-shell">
+
+        <div class="contact-intro">
+          <div class="kicker"><span></span> Hablemos de negocio</div>
+          <h2>Una conversación puede convertirse en tu <em>siguiente solución.</em></h2>
+          <p>
+            Cuéntanos qué proceso quieres optimizar, qué sistema necesitas desarrollar
+            o qué reto tecnológico quieres resolver. Nuestro primer paso es entender
+            cómo funciona tu organización.
+          </p>
+
+          <div class="contact-stats">
+            <div>
+              <strong>01</strong>
+              <span>Entendemos</span>
+              <small>Tu operación y tus objetivos.</small>
+            </div>
+            <div>
+              <strong>02</strong>
+              <span>Diseñamos</span>
+              <small>Una solución alineada al negocio.</small>
+            </div>
+            <div>
+              <strong>03</strong>
+              <span>Construimos</span>
+              <small>Tecnología preparada para crecer.</small>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="detail">
+              <div class="detail-icon">✉</div>
+              <div>
+                <label>Correo corporativo</label>
+                <strong><a href="mailto:contacto@geasstech.com">contacto@geasstech.com</a></strong>
+              </div>
+            </div>
+
+            <div class="detail">
+              <div class="detail-icon">⌂</div>
+              <div>
+                <label>Operación</label>
+                <strong>Colombia · Soluciones digitales empresariales</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="available">
+            <i></i>
+            <span>Disponible para nuevos proyectos y oportunidades de colaboración</span>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="form-accent"></div>
+
+          <div class="form-head">
+            <div>
+              <span class="form-label">SOLICITUD DE CONTACTO</span>
+              <h2>Cuéntanos sobre tu proyecto</h2>
+            </div>
+            <div class="form-code">GT / 01</div>
+          </div>
+
+          <p class="form-description">
+            Completa los siguientes datos. La información nos permitirá entender
+            mejor tu necesidad antes de establecer contacto.
+          </p>
+
+          <form id="contactForm">
+            <div class="fields">
+              <div class="field">
+                <label for="nombre">Nombre completo <b>*</b></label>
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellido" required>
+              </div>
+
+              <div class="field">
+                <label for="empresa">Empresa</label>
+                <input id="empresa" name="empresa" type="text" placeholder="Organización">
+              </div>
+
+              <div class="field">
+                <label for="email">Correo electrónico <b>*</b></label>
+                <input id="email" name="email" type="email" placeholder="nombre@empresa.com" required>
+              </div>
+
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" placeholder="+57 300 000 0000">
+              </div>
+
+              <div class="field full">
+                <label for="tipo">Área de interés <b>*</b></label>
+                <select id="tipo" name="tipo" required>
+                  <option value="" selected disabled>Selecciona una solución</option>
+                  <option>Sistemas empresariales</option>
+                  <option>Automatización de procesos</option>
+                  <option>Business Intelligence</option>
+                  <option>Inteligencia artificial</option>
+                  <option>Integraciones y APIs</option>
+                  <option>Consultoría tecnológica</option>
+                  <option>Otro proyecto</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="mensaje">Descripción del proyecto <b>*</b></label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas mejorar, desarrollar o automatizar..." required></textarea>
+              </div>
+            </div>
+
+            <div class="form-bottom">
+              <div class="privacy">
+                <span>PRIVACIDAD</span>
+                <p>Tus datos serán utilizados exclusivamente para gestionar esta solicitud.</p>
+              </div>
+
+              <button class="send" type="submit">
+                Enviar solicitud
+                <span>↗</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="footer-banner">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-kicker">GEASS TECH</div>
+          <h2>La tecnología que impulsa <em>tu siguiente paso.</em></h2>
+          <p>
+            Soluciones digitales pensadas para simplificar procesos, conectar
+            información y convertir los retos de tu organización en oportunidades.
+          </p>
+        </div>
+
+        <a class="footer-btn" href="https://johandav2.github.io/Geass-Tech/login.html">
+          Ingresar a la plataforma →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      <span>© 2026 Geass Tech. Todos los derechos reservados.</span>
+      <span>Soluciones digitales para empresas.</span>
+    </div>
+  </footer>
+
+  <script>
+    // La funcionalidad de envío se conectará posteriormente con Supabase.
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      alert("Formulario preparado. La conexión con Geass Tech se configurará próximamente.");
+    });
+  </script>
+</body>
+</html>
