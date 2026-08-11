@@ -2319,6 +2319,172 @@
         font-size: 18px;
       }
     }
+
+
+    /* ===== LÍNEA DE TIEMPO CONCISA ===== */
+    .timeline-section {
+      background: #fff;
+      padding: 76px 30px 82px;
+      border-bottom: 1px solid #e5dfe0;
+    }
+
+    .timeline-heading {
+      width: min(760px, 100%);
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .timeline-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #8c1724;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .timeline-kicker span {
+      width: 22px;
+      height: 2px;
+      background: #c13b4a;
+    }
+
+    .timeline-heading h2 {
+      color: #1d1517;
+      font-size: 36px;
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+
+    .timeline-heading h2 em {
+      color: #8c1724;
+      font-style: normal;
+    }
+
+    .timeline-heading p {
+      color: #777178;
+      font-size: 12px;
+      line-height: 1.65;
+      margin: 11px auto 0;
+      max-width: 570px;
+    }
+
+    .timeline {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .timeline:before {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      top: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, #e0d7d9, #8c1724, #e0d7d9);
+    }
+
+    .timeline-step {
+      position: relative;
+      text-align: center;
+      padding: 0 17px;
+      z-index: 1;
+    }
+
+    .timeline-dot {
+      width: 49px;
+      height: 49px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 1px solid #bfa0a5;
+      color: #8c1724;
+      font-size: 11px;
+      font-weight: 900;
+      box-shadow: 0 0 0 7px #fff;
+    }
+
+    .timeline-step:first-child .timeline-dot {
+      background: #8c1724;
+      color: #fff;
+      border-color: #8c1724;
+    }
+
+    .timeline-content span {
+      color: #a13a47;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .timeline-content h3 {
+      color: #211719;
+      font-size: 14px;
+      line-height: 1.25;
+      margin: 7px 0 7px;
+      letter-spacing: -.02em;
+    }
+
+    .timeline-content p {
+      color: #777178;
+      font-size: 10px;
+      line-height: 1.55;
+      max-width: 185px;
+      margin: auto;
+    }
+
+    @media(max-width:760px) {
+      .timeline-section {
+        padding: 60px 20px 65px;
+      }
+
+      .timeline-heading h2 {
+        font-size: 30px;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-left: 13px;
+      }
+
+      .timeline:before {
+        left: 37px;
+        right: auto;
+        top: 24px;
+        bottom: 24px;
+        width: 1px;
+        height: auto;
+      }
+
+      .timeline-step {
+        display: grid;
+        grid-template-columns: 49px 1fr;
+        gap: 20px;
+        text-align: left;
+        padding: 0;
+      }
+
+      .timeline-dot {
+        margin: 0;
+      }
+
+      .timeline-content p {
+        margin: 0;
+        max-width: 430px;
+      }
+    }
   </style>
 </head>
 
@@ -2483,24 +2649,6 @@
               <p>Dashboards, indicadores y datos centralizados para visualizar lo que realmente importa.</p>
             </div>
           </article>
-
-          <article class="showcase-card showcase-side">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=85"
-              alt="Profesionales desarrollando tecnología">
-            <div class="showcase-overlay">
-              <span>03 · INNOVACIÓN</span>
-              <h3>Procesos preparados para evolucionar</h3>
-            </div>
-          </article>
-
-          <article class="showcase-card showcase-side showcase-hidden">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85"
-              alt="Tecnología y desarrollo">
-            <div class="showcase-overlay">
-              <span>04 · TECNOLOGÍA</span>
-              <h3>Construimos soluciones digitales</h3>
-            </div>
-          </article>
         </div>
 
         <button class="showcase-control next" aria-label="Siguiente">›</button>
@@ -2513,6 +2661,54 @@
         <button aria-label="Slide 4"></button>
       </div>
     </section>
+
+    <!-- ===== LÍNEA DE TIEMPO GEASS TECH ===== -->
+    <section class="timeline-section" id="proceso">
+      <div class="timeline-heading">
+        <div class="timeline-kicker"><span></span> Nuestro proceso</div>
+        <h2>De la necesidad a la <em>solución</em></h2>
+        <p>Un proceso claro para convertir tus retos empresariales en resultados digitales.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-step">
+          <div class="timeline-dot">01</div>
+          <div class="timeline-content">
+            <span>Diagnóstico</span>
+            <h3>Entendemos tu operación</h3>
+            <p>Analizamos necesidades, procesos y oportunidades de mejora.</p>
+          </div>
+        </article>
+
+        <article class="timeline-step">
+          <div class="timeline-dot">02</div>
+          <div class="timeline-content">
+            <span>Diseño</span>
+            <h3>Diseñamos la solución</h3>
+            <p>Definimos una experiencia y arquitectura alineadas con tus objetivos.</p>
+          </div>
+        </article>
+
+        <article class="timeline-step">
+          <div class="timeline-dot">03</div>
+          <div class="timeline-content">
+            <span>Implementación</span>
+            <h3>Construimos y conectamos</h3>
+            <p>Desarrollamos, integramos y ponemos la tecnología en operación.</p>
+          </div>
+        </article>
+
+        <article class="timeline-step">
+          <div class="timeline-dot">04</div>
+          <div class="timeline-content">
+            <span>Evolución</span>
+            <h3>Medimos y mejoramos</h3>
+            <p>Seguimos optimizando la solución a medida que tu empresa crece.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
 
     <!-- ===== SECCIÓN EDITORIAL / CAPACIDADES ===== -->
     <section class="editorial-section" id="capacidades">
@@ -2794,4 +2990,3 @@
 </body>
 
 </html>
-```
