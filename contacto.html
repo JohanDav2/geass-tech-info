@@ -32,72 +32,94 @@
     a{text-decoration:none;color:inherit}
 
     /* NAVBAR */
-    .nav{
-      height:76px;
-      padding:0 38px;
-      background:#fff;
-      border-bottom:1px solid #e6e1e2;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      position:relative;
-      z-index:10;
+    .nav {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: #fff;
+      border-bottom: 1px solid #edf0f6;
+      position: relative;
+      z-index: 10;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:11px;
-      color:#171315;
-      font-size:15px;
-      font-weight:900;
-      letter-spacing:-.035em;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      color: #19191c;
+      white-space: nowrap;
     }
-    .brand-mark{
-      width:32px;height:32px;border-radius:9px;
-      display:grid;place-items:center;
-      color:#fff;
-      background:linear-gradient(135deg,var(--red2),var(--red));
-      font-size:10px;font-weight:900;
-      box-shadow:0 7px 18px rgba(140,23,36,.18);
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #e04055, #8c1724);
+      position: relative;
+      box-shadow: 0 7px 18px rgba(140, 23, 36, .30);
     }
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:30px;
-      margin-left:auto;
-      margin-right:28px;
+    .brand-mark:before,
+    .brand-mark:after {
+      content: "";
+      position: absolute;
+      background: #fff;
+      border-radius: 5px;
     }
-    .nav-links a{
-      color:#575053;
-      font-size:11px;
-      font-weight:700;
-      transition:.2s ease;
+    .brand-mark:before {
+      width: 7px;
+      height: 20px;
+      left: 7px;
+      top: 5px;
+      transform: skewY(-28deg)
+    }
+    .brand-mark:after {
+      width: 7px;
+      height: 14px;
+      right: 7px;
+      top: 8px;
+      transform: skewY(28deg)
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-left: auto;
+      margin-right: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #203560;
     }
     .nav-links a:hover,
-    .nav-links a.active{color:var(--red)}
-    .login{
-      border:1px solid #8c1724;
-      border-radius:4px;
-      padding:10px 16px;
-      color:#fff;
-      background:#8c1724;
-      font-size:10px;
-      font-weight:900;
-      transition:.2s ease;
-      box-shadow:0 7px 18px rgba(140,23,36,.18);
+    .nav-links a.active { color: #a500df; }
+    .nav-actions {
+      display: flex;
+      gap: 9px;
+      align-items: center;
     }
-    .login:hover{
-      background:#a5202f;
-      border-color:#a5202f;
-      color:#fff;
-      transform:translateY(-1px);
-      box-shadow:0 10px 22px rgba(140,23,36,.24);
+    .btn {
+      border: 0;
+      border-radius: 4px;
+      padding: 11px 18px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .2s ease;
+      text-decoration: none;
     }
-    .login:hover{
-      background:var(--red);
-      border-color:var(--red);
-      color:#fff;
+    .btn-outline {
+      background: #fff;
+      border: 1px solid #8c1724;
+      color: #8c1724;
     }
+    .btn-primary {
+      background: #8c1724;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(140, 23, 36, .25);
+    }
+    .btn:hover { transform: translateY(-1px); }
 
     /* HERO — MISMA LÍNEA VISUAL DE LA LANDING */
     .hero{
@@ -787,20 +809,21 @@
 <body>
   <header class="nav">
     <a class="brand" href="index.html">
-      <span class="brand-mark">GT</span>
-      <span>GEASS TECH</span>
+      <span class="brand-mark"></span>
+      Geass Tech
     </a>
 
     <nav class="nav-links">
-      <a href="index.html">Inicio</a>
       <a href="info-tech.html">Soluciones</a>
       <a href="experiencia.html">Experiencia</a>
+      <a href="#empresa">Nuestra empresa</a>
       <a class="active" href="contacto.html">Contacto</a>
     </nav>
 
-    <a class="login" href="https://johandav2.github.io/Geass-Tech/login.html">
-      Iniciar sesión
-    </a>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="https://johandav2.github.io/Geass-Tech/login.html">Iniciar sesión</a>
+      <a class="btn btn-primary" href="contacto.html">Comenzar</a>
+    </div>
   </header>
 
   <main>
