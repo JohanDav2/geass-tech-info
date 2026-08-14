@@ -3540,11 +3540,34 @@
             font-weight: 700;
         }
 
-        /* MEDIA QUERIES FOR SECTIONS 05, 06, 07 */
+        /* GLOBAL RESPONSIVE REFINEMENTS FOR SECTIONS 01-07 */
+        @media (max-width: 1050px) {
+            .tech-capabilities-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 18px !important;
+            }
+
+            .sectors-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 16px !important;
+            }
+
+            .sector-card-highlight {
+                grid-column: span 3 !important;
+            }
+        }
+
         @media (max-width: 900px) {
+            .tech-applied-section,
+            .sector-experience-section,
+            .case-studies-section {
+                padding: 60px 20px !important;
+            }
+
             .tech-capabilities-grid,
             .sectors-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px !important;
             }
 
             .capability-card-full,
@@ -3554,10 +3577,38 @@
 
             .case-body-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
+                gap: 14px !important;
             }
 
             .tech-stack-strip {
-                flex-direction: column !alignment: flex-start;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding: 20px 22px !important;
+                gap: 14px !important;
+            }
+
+            .tech-stack-badges {
+                gap: 6px !important;
+            }
+
+            .tech-badge {
+                font-size: 11px !important;
+                padding: 5px 12px !important;
+            }
+
+            .dark-band {
+                padding: 55px 20px !important;
+            }
+
+            .dark-inner h2 {
+                font-size: 30px !important;
+                line-height: 1.15 !important;
+            }
+
+            .experience-metrics {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 16px !important;
             }
         }
 
@@ -3566,6 +3617,7 @@
             .sectors-grid,
             .case-body-grid {
                 grid-template-columns: 1fr !important;
+                gap: 12px !important;
             }
 
             .capability-card-full,
@@ -3573,18 +3625,53 @@
                 grid-column: span 1 !important;
             }
 
-            .tech-applied-section,
-            .sector-experience-section,
-            .case-studies-section {
-                padding: 60px 16px !important;
+            .capability-card {
+                padding: 22px 18px !important;
             }
 
-            .case-card {
+            .sector-card {
                 padding: 20px 16px !important;
             }
 
+            .tech-applied-section,
+            .sector-experience-section,
+            .case-studies-section {
+                padding: 45px 16px !important;
+            }
+
+            .case-card {
+                padding: 18px 14px !important;
+                border-radius: 12px !important;
+            }
+
+            .case-header {
+                margin-bottom: 16px !important;
+                padding-bottom: 14px !important;
+            }
+
             .case-header h3 {
-                font-size: 18px !important;
+                font-size: 17px !important;
+                line-height: 1.25 !important;
+            }
+
+            .case-block {
+                padding: 14px 12px !important;
+                border-radius: 10px !important;
+            }
+
+            .case-block p {
+                font-size: 12.5px !important;
+                line-height: 1.5 !important;
+            }
+
+            .section-head h2 {
+                font-size: 26px !important;
+                line-height: 1.18 !important;
+            }
+
+            .section-head p {
+                font-size: 13.5px !important;
+                line-height: 1.55 !important;
             }
         }
     </style>
