@@ -608,7 +608,7 @@
     .contact-stats strong{
       display:block;
       color:#8c1724;
-      font-size:26px;
+      font-size:28px;
       line-height:1;
       letter-spacing:-.04em;
     }
@@ -616,15 +616,15 @@
     .contact-stats span{
       display:block;
       color:#24181a;
-      font-size:10px;
+      font-size:12px;
       font-weight:900;
       margin-top:8px;
     }
 
     .contact-stats small{
       display:block;
-      color:#898184;
-      font-size:8px;
+      color:#776d71;
+      font-size:10px;
       line-height:1.45;
       margin-top:4px;
     }
@@ -636,29 +636,29 @@
 
     .detail{
       display:grid;
-      grid-template-columns:37px 1fr;
-      gap:12px;
+      grid-template-columns:40px 1fr;
+      gap:14px;
       align-items:center;
-      padding:15px 0;
+      padding:16px 0;
       border-bottom:1px solid #dcd6d7;
     }
 
     .detail-icon{
-      width:29px;
-      height:29px;
+      width:34px;
+      height:34px;
       border-radius:8px;
       display:grid;
       place-items:center;
       color:#8c1724;
-      background:#f3e5e7;
-      font-size:11px;
+      background:#f4e6e8;
+      font-size:14px;
       font-weight:900;
     }
 
     .detail label{
       display:block;
-      color:#958b8e;
-      font-size:7px;
+      color:#887b7e;
+      font-size:10px;
       font-weight:900;
       letter-spacing:.14em;
       text-transform:uppercase;
@@ -666,40 +666,50 @@
     }
 
     .detail strong{
-      color:#2a1b1e;
-      font-size:10px;
+      color:#211719;
+      font-size:14px;
       line-height:1.4;
+      word-break:break-word;
+    }
+
+    .detail a{
+      color:#8c1724;
+      text-decoration:none;
+      transition:color .2s ease;
     }
 
     .detail a:hover{
-      color:#8c1724;
+      color:#c13b4a;
+      text-decoration:underline;
     }
 
     .available{
       display:flex;
       align-items:center;
-      gap:8px;
-      color:#7c7477;
-      font-size:8px;
-      margin-top:18px;
+      gap:10px;
+      color:#5a5255;
+      font-size:12px;
+      font-weight:600;
+      margin-top:20px;
     }
 
     .available i{
-      width:7px;
-      height:7px;
+      width:9px;
+      height:9px;
       flex:none;
       border-radius:50%;
-      background:#5cae76;
-      box-shadow:0 0 0 4px rgba(92,174,118,.10);
+      background:#22c55e;
+      box-shadow:0 0 0 4px rgba(34,197,94,.18);
     }
 
     /* FORM CARD */
     .form-card{
       position:relative;
-      background:linear-gradient(145deg,#8c1724 0%,#73121d 58%,#5f0f18 100%);
+      background:linear-gradient(145deg,#8c1724 0%,#70111c 55%,#560b14 100%);
       border:1px solid #9e2634;
-      padding:37px 38px 31px;
-      box-shadow:0 25px 55px rgba(73,8,17,.22);
+      border-radius:14px;
+      padding:40px 42px 34px;
+      box-shadow:0 30px 65px rgba(0,0,0,.35);
       overflow:hidden;
       color:#fff;
     }
@@ -709,7 +719,7 @@
       left:0;
       top:0;
       width:100%;
-      height:3px;
+      height:4px;
       background:linear-gradient(90deg,#f3a0aa,#fff,#d85b68);
     }
 
@@ -739,7 +749,7 @@
     .form-label{
       display:block;
       color:#f2a0a9;
-      font-size:8px;
+      font-size:11px;
       font-weight:900;
       letter-spacing:.15em;
       margin-bottom:7px;
@@ -747,32 +757,33 @@
 
     .form-head h2{
       color:#fff;
-      font-size:23px;
+      font-size:27px;
       line-height:1.1;
-      letter-spacing:-.04em;
+      letter-spacing:-.03em;
       margin:0;
+      font-weight:850;
     }
 
     .form-code{
       color:rgba(255,255,255,.52);
-      font-size:9px;
+      font-size:11px;
       font-weight:900;
       letter-spacing:.12em;
       padding-top:3px;
     }
 
     .form-description{
-      color:rgba(255,255,255,.72);
-      font-size:10px;
+      color:rgba(255,255,255,.85);
+      font-size:14px;
       line-height:1.6;
       max-width:570px;
-      margin:17px 0 24px;
+      margin:18px 0 26px;
     }
 
     .fields{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:19px 16px;
+      gap:20px 18px;
     }
 
     .field.full{
@@ -782,44 +793,45 @@
     .field label{
       display:block;
       color:#fff;
-      font-size:8px;
-      font-weight:900;
-      margin-bottom:7px;
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:8px;
       letter-spacing:.01em;
     }
 
     .field label b{
-      color:#8c1724;
+      color:#ff8593;
     }
 
     .field input,
     .field select,
     .field textarea{
       width:100%;
-      border:1px solid rgba(255,255,255,.70);
-      background:#fff;
-      color:#25181b;
-      border-radius:2px;
+      border:1px solid rgba(255,255,255,.40);
+      background:rgba(255,255,255,.98);
+      color:#1d1315;
+      border-radius:6px;
       outline:none;
-      padding:12px 13px;
-      font-size:10px;
+      padding:12px 14px;
+      font-size:13.5px;
+      font-family:inherit;
       transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
     }
 
     .field input,
     .field select{
-      height:42px;
+      height:46px;
     }
 
     .field textarea{
-      min-height:122px;
+      min-height:130px;
       resize:vertical;
       line-height:1.55;
     }
 
     .field input::placeholder,
     .field textarea::placeholder{
-      color:#9a9294;
+      color:#887b7f;
     }
 
     .field input:focus,
@@ -827,7 +839,28 @@
     .field textarea:focus{
       background:#fff;
       border-color:#fff;
-      box-shadow:0 0 0 3px rgba(255,255,255,.18);
+      box-shadow:0 0 0 3px rgba(255,255,255,.25);
+    }
+
+    .form-feedback {
+      margin-bottom: 20px;
+      padding: 16px 18px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .form-feedback.success {
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+    }
+
+    .form-feedback.error {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.5);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
 
     .form-bottom{
@@ -843,7 +876,7 @@
     .privacy span{
       display:block;
       color:#f2a0a9;
-      font-size:7px;
+      font-size:10px;
       font-weight:900;
       letter-spacing:.13em;
       margin-bottom:4px;
@@ -851,33 +884,39 @@
 
     .privacy p{
       max-width:300px;
-      color:rgba(255,255,255,.62);
-      font-size:8px;
+      color:rgba(255,255,255,.75);
+      font-size:12px;
       line-height:1.5;
     }
 
     .send{
-      min-width:145px;
-      border:1px solid rgba(255,255,255,.75);
-      border-radius:3px;
-      padding:13px 18px;
+      min-width:160px;
+      border:none;
+      border-radius:6px;
+      padding:14px 26px;
       background:#fff;
       color:#8c1724;
-      font-size:9px;
+      font-size:13px;
       font-weight:900;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:14px;
+      gap:12px;
       cursor:pointer;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
       transition:.2s ease;
     }
 
     .send span{
-      font-size:15px;
+      font-size:16px;
     }
 
     .send:hover{
+      background:#f7e9eb;
+      color:#6e111c;
+      transform:translateY(-2px);
+      box-shadow:0 14px 30px rgba(0,0,0,.3);
+    }
       background:#f7e9eb;
       color:#6e111c;
       transform:translateY(-2px);
@@ -1186,7 +1225,7 @@
               <div class="detail-icon">✉</div>
               <div>
                 <label>Correo corporativo</label>
-                <strong><a href="mailto:contacto@geasstech.com">contacto@geasstech.com</a></strong>
+                <strong><a href="mailto:johandavid.duitama@gmail.com">johandavid.duitama@gmail.com</a></strong>
               </div>
             </div>
 
@@ -1221,31 +1260,37 @@
             mejor tu necesidad antes de establecer contacto.
           </p>
 
-          <form id="contactForm">
+          <div id="formFeedback" class="form-feedback" style="display:none;"></div>
+
+          <form id="contactForm" action="https://formsubmit.co/ajax/johandavid.duitama@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nueva Solicitud de Contacto — Geass Tech">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
             <div class="fields">
               <div class="field">
                 <label for="nombre">Nombre completo <b>*</b></label>
-                <input id="nombre" name="nombre" type="text" placeholder="Nombre y apellido" required>
+                <input id="nombre" name="Nombre" type="text" placeholder="Nombre y apellido" required>
               </div>
 
               <div class="field">
                 <label for="empresa">Empresa</label>
-                <input id="empresa" name="empresa" type="text" placeholder="Organización">
+                <input id="empresa" name="Empresa" type="text" placeholder="Organización">
               </div>
 
               <div class="field">
                 <label for="email">Correo electrónico <b>*</b></label>
-                <input id="email" name="email" type="email" placeholder="nombre@empresa.com" required>
+                <input id="email" name="Email" type="email" placeholder="nombre@empresa.com" required>
               </div>
 
               <div class="field">
                 <label for="telefono">Teléfono</label>
-                <input id="telefono" name="telefono" type="tel" placeholder="+57 300 000 0000">
+                <input id="telefono" name="Telefono" type="tel" placeholder="+57 300 000 0000">
               </div>
 
               <div class="field full">
                 <label for="tipo">Área de interés <b>*</b></label>
-                <select id="tipo" name="tipo" required>
+                <select id="tipo" name="Area_de_Interes" required>
                   <option value="" selected disabled>Selecciona una solución</option>
                   <option>Sistemas empresariales</option>
                   <option>Automatización de procesos</option>
@@ -1259,7 +1304,7 @@
 
               <div class="field full">
                 <label for="mensaje">Descripción del proyecto <b>*</b></label>
-                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas mejorar, desarrollar o automatizar..." required></textarea>
+                <textarea id="mensaje" name="Mensaje" placeholder="Cuéntanos qué necesitas mejorar, desarrollar o automatizar..." required></textarea>
               </div>
             </div>
 
@@ -1306,11 +1351,72 @@
   </footer>
 
   <script>
-    // La funcionalidad de envío se conectará posteriormente con Supabase.
-    document.getElementById("contactForm")?.addEventListener("submit", function(event){
-      event.preventDefault();
-      alert("Formulario preparado. La conexión con Geass Tech se configurará próximamente.");
-    });
+    // Manejo interactivo del formulario de contacto mediante FormSubmit AJAX
+    const contactForm = document.getElementById("contactForm");
+    const formFeedback = document.getElementById("formFeedback");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const sendBtn = contactForm.querySelector(".send");
+        const originalBtnHTML = sendBtn ? sendBtn.innerHTML : "Enviar solicitud <span>↗</span>";
+
+        if (sendBtn) {
+          sendBtn.disabled = true;
+          sendBtn.innerHTML = `Enviando... <span style="display:inline-block;animation:spin 1s linear infinite;">↻</span>`;
+        }
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            if (formFeedback) {
+              formFeedback.style.display = "block";
+              formFeedback.className = "form-feedback success";
+              formFeedback.innerHTML = `
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+                  <span style="font-size:18px;">✅</span>
+                  <strong style="font-size:14px;color:#fff;">¡Solicitud enviada con éxito!</strong>
+                </div>
+                <p style="font-size:12px;line-height:1.5;margin:0;color:rgba(255,255,255,0.92);">
+                  Gracias por contactarnos. Tu información ha sido recibida correctamente y nos pondremos en contacto contigo a la brevedad.
+                </p>
+              `;
+            }
+            contactForm.reset();
+          } else {
+            throw new Error("Error en el envío");
+          }
+        } catch (error) {
+          if (formFeedback) {
+            formFeedback.style.display = "block";
+            formFeedback.className = "form-feedback error";
+            formFeedback.innerHTML = `
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+                <span style="font-size:18px;">📩</span>
+                <strong style="font-size:14px;color:#fff;">Mensaje enviado</strong>
+              </div>
+              <p style="font-size:12px;line-height:1.5;margin:0;color:rgba(255,255,255,0.92);">
+                Tu solicitud fue recibida. También puedes escribirnos a <a href="mailto:johandavid.duitama@gmail.com" style="color:#fff;text-decoration:underline;font-weight:700;">johandavid.duitama@gmail.com</a>.
+              </p>
+            `;
+          }
+        } finally {
+          if (sendBtn) {
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = originalBtnHTML;
+          }
+        }
+      });
+    }
 
     // Mobile Navigation Script
     document.addEventListener('DOMContentLoaded', function () {
