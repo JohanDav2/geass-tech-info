@@ -783,7 +783,7 @@
       line-height: 1.6
     }
 
-    /* MOBILE */
+    /* MOBILE & TABLET HERO */
     @media(max-width:900px) {
       .hero-inner {
         width: min(100% - 32px, 680px);
@@ -836,14 +836,37 @@
       }
     }
 
+    @media(max-width:800px) {
+      .visual {
+        display: none !important;
+      }
+
+      .hero-inner {
+        padding-top: 20px;
+        padding-bottom: 35px;
+      }
+
+      .hero-copy {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+
+      .hero-ctas {
+        display: flex !important;
+        gap: 12px;
+        align-items: center;
+      }
+    }
+
     @media(max-width:560px) {
       .hero-inner {
         padding-bottom: 30px;
       }
 
       .hero-copy {
-        padding-top: 30px;
-        padding-bottom: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
       }
 
       .eyebrow {
@@ -881,49 +904,6 @@
       .hero-note {
         font-size: 11px;
         margin-top: 18px;
-      }
-
-      .visual {
-        height: 300px;
-      }
-
-      .dashboard {
-        width: min(320px, 90vw);
-        height: 200px;
-        padding: 10px;
-      }
-
-      .dash-layout {
-        height: 155px;
-        grid-template-columns: 52px 1fr;
-      }
-
-      .chart {
-        padding: 8px;
-      }
-
-      .bars {
-        height: 95px;
-      }
-
-      .float-one {
-        top: 25px;
-        right: 4px;
-      }
-
-      .float-two {
-        bottom: 25px;
-        left: 4px;
-      }
-
-      .float-card {
-        padding: 8px 10px;
-        font-size: 9px;
-        border-radius: 8px;
-      }
-
-      .float-card strong {
-        font-size: 13px;
       }
 
       .section {
