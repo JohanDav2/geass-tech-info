@@ -3245,6 +3245,348 @@
                 font-size: 13px !important;
             }
         }
+
+        /* =========================================================
+           SECCIÓN 05 — TECNOLOGÍA APLICADA AL NEGOCIO
+           ========================================================= */
+        .tech-applied-section {
+            background: #ffffff;
+            padding: 85px 30px;
+            border-top: 1px solid var(--line);
+        }
+
+        .tech-capabilities-grid {
+            width: min(1140px, 100%);
+            margin: 45px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .capability-card {
+            background: #fcfafa;
+            border: 1px solid #e8e2e3;
+            border-radius: 12px;
+            padding: 30px 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(140, 23, 36, 0.08);
+            border-color: #d68f97;
+            background: #ffffff;
+        }
+
+        .capability-card-full {
+            grid-column: span 2;
+        }
+
+        .capability-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #8c1724, #c13b4a);
+            color: #ffffff;
+            display: grid;
+            place-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(140, 23, 36, 0.25);
+        }
+
+        .capability-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #211719;
+            margin-bottom: 10px;
+        }
+
+        .capability-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #665f61;
+            margin: 0;
+        }
+
+        .tech-stack-strip {
+            width: min(1140px, 100%);
+            margin: 45px auto 0;
+            padding: 24px 30px;
+            background: #110c0d;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tech-stack-title {
+            color: #d09aa2;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .tech-stack-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.08);
+            color: #f2e9ea;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .tech-badge:hover {
+            background: rgba(140, 23, 36, 0.4);
+            border-color: #c13b4a;
+        }
+
+        /* =========================================================
+           SECCIÓN 06 — EXPERIENCIA SECTORIAL
+           ========================================================= */
+        .sector-experience-section {
+            background: #faf8f8;
+            padding: 85px 30px;
+            border-top: 1px solid var(--line);
+        }
+
+        .sectors-grid {
+            width: min(1140px, 100%);
+            margin: 45px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .sector-card {
+            background: #ffffff;
+            border: 1px solid #e3dcddee;
+            border-radius: 12px;
+            padding: 26px 22px;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: left;
+        }
+
+        .sector-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
+            border-color: #8c1724;
+        }
+
+        .sector-card-highlight {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #ffffff 0%, #fff7f8 100%);
+            border-color: #e2a6ad;
+        }
+
+        .sector-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 900;
+            color: #8c1724;
+            background: rgba(140, 23, 36, 0.08);
+            padding: 3px 9px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+        }
+
+        .sector-card h3 {
+            font-size: 17px;
+            font-weight: 800;
+            color: #211719;
+            margin-bottom: 8px;
+        }
+
+        .sector-card p {
+            font-size: 13px;
+            line-height: 1.55;
+            color: #665f61;
+            margin: 0;
+        }
+
+        /* =========================================================
+           SECCIÓN 07 — CASOS Y SOLUCIONES
+           ========================================================= */
+        .case-studies-section {
+            background: #110c0d;
+            color: #ffffff;
+            padding: 90px 30px;
+            border-top: 1px solid #28191c;
+        }
+
+        .case-studies-section .section-head h2 {
+            color: #ffffff;
+        }
+
+        .case-studies-section .section-head p {
+            color: #a89f9f;
+        }
+
+        .cases-container {
+            width: min(1140px, 100%);
+            margin: 50px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .case-card {
+            background: #1a1315;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .case-card:hover {
+            border-color: rgba(224, 64, 85, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .case-header {
+            margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .case-number {
+            font-size: 11px;
+            font-weight: 900;
+            color: #e04055;
+            letter-spacing: 0.1em;
+        }
+
+        .case-header h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .case-body-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .case-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 20px 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .block-tag {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+            color: #d6cbd0;
+        }
+
+        .case-block-problem .block-tag { color: #f87171; }
+        .case-block-solution .block-tag { color: #60a5fa; }
+        .case-block-tech .block-tag { color: #c084fc; }
+        .case-block-result .block-tag { color: #4ade80; }
+
+        .case-block p {
+            font-size: 13px;
+            line-height: 1.55;
+            color: #d1c7ca;
+            margin: 0;
+        }
+
+        .case-block-result p strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tech-pills span {
+            background: rgba(255, 255, 255, 0.07);
+            color: #e5dcde;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* MEDIA QUERIES FOR SECTIONS 05, 06, 07 */
+        @media (max-width: 900px) {
+            .tech-capabilities-grid,
+            .sectors-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .capability-card-full,
+            .sector-card-highlight {
+                grid-column: span 2 !important;
+            }
+
+            .case-body-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .tech-stack-strip {
+                flex-direction: column !alignment: flex-start;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .tech-capabilities-grid,
+            .sectors-grid,
+            .case-body-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .capability-card-full,
+            .sector-card-highlight {
+                grid-column: span 1 !important;
+            }
+
+            .tech-applied-section,
+            .sector-experience-section,
+            .case-studies-section {
+                padding: 60px 16px !important;
+            }
+
+            .case-card {
+                padding: 20px 16px !important;
+            }
+
+            .case-header h3 {
+                font-size: 18px !important;
+            }
+        }
     </style>
 </head>
 
@@ -3415,6 +3757,243 @@
                             negocio.</p>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 05 — TECNOLOGÍA APLICADA AL NEGOCIO -->
+        <section class="section tech-applied-section" id="tecnologia-aplicada">
+            <div class="section-head">
+                <div class="kicker"><span></span> 05 — TECNOLOGÍA APLICADA AL NEGOCIO</div>
+                <h2>Tecnología que se <em>adapta al problema</em></h2>
+                <p>Presentamos nuestras capacidades técnicas enfocadas en resolver retos específicos de tu negocio, sin convertir la tecnología en un obstáculo.</p>
+            </div>
+
+            <div class="tech-capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Aplicaciones y plataformas</h3>
+                    <p>Arquitecturas web, sistemas empresariales y aplicaciones personalizadas diseñadas para la escala de tu empresa.</p>
+                </div>
+
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5c0 1.66 4 3 9 3s9-1.34 9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 5v14"/></svg>
+                    </div>
+                    <h3>Datos y analítica</h3>
+                    <p>Procesamiento, consolidación, definición de indicadores estratégicos y visualización en tiempo real.</p>
+                </div>
+
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Automatización</h3>
+                    <p>Flujos digitales, integraciones entre plataformas y automatización de operaciones repetitivas.</p>
+                </div>
+
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Inteligencia artificial</h3>
+                    <p>Análisis inteligente, asistentes virtuales, búsqueda contextual y procesamiento de información compleja.</p>
+                </div>
+
+                <div class="capability-card capability-card-full">
+                    <div class="capability-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </div>
+                    <h3>Integración</h3>
+                    <p>APIs, microservicios y conexión fluida entre sistemas heredados y plataformas modernas.</p>
+                </div>
+            </div>
+
+            <!-- Tech Stack Discrete Footer Banner -->
+            <div class="tech-stack-strip">
+                <span class="tech-stack-title">Tecnologías y herramientas integradas:</span>
+                <div class="tech-stack-badges">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">Power Apps</span>
+                    <span class="tech-badge">Power Automate</span>
+                    <span class="tech-badge">Power Pages</span>
+                    <span class="tech-badge">Google Apps Script</span>
+                    <span class="tech-badge">APIs &amp; REST</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 06 — EXPERIENCIA SECTORIAL -->
+        <section class="section sector-experience-section" id="sectores">
+            <div class="section-head">
+                <div class="kicker"><span></span> 06 — EXPERIENCIA SECTORIAL</div>
+                <h2>Sectores donde nuestras soluciones <em>pueden generar valor</em></h2>
+                <p>Diseñamos herramientas digitales flexibles que se adaptan a las necesidades operativas de diversos entornos de negocio.</p>
+            </div>
+
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <div class="sector-badge">01</div>
+                    <h3>Servicios</h3>
+                    <p>Digitalización y automatización de operaciones.</p>
+                </div>
+
+                <div class="sector-card">
+                    <div class="sector-badge">02</div>
+                    <h3>Industria</h3>
+                    <p>Procesos, control, información y eficiencia operativa.</p>
+                </div>
+
+                <div class="sector-card">
+                    <div class="sector-badge">03</div>
+                    <h3>Seguridad y salud</h3>
+                    <p>Gestión, seguimiento, cumplimiento y trazabilidad.</p>
+                </div>
+
+                <div class="sector-card">
+                    <div class="sector-badge">04</div>
+                    <h3>Administración</h3>
+                    <p>Digitalización de procesos y gestión de información.</p>
+                </div>
+
+                <div class="sector-card">
+                    <div class="sector-badge">05</div>
+                    <h3>Operaciones</h3>
+                    <p>Control, seguimiento y optimización de recursos.</p>
+                </div>
+
+                <div class="sector-card">
+                    <div class="sector-badge">06</div>
+                    <h3>Cumplimiento</h3>
+                    <p>Gestión documental, requisitos, evidencias y seguimiento.</p>
+                </div>
+
+                <div class="sector-card sector-card-highlight">
+                    <div class="sector-badge">07</div>
+                    <h3>Gestión empresarial</h3>
+                    <p>Sistemas integrales para centralizar y administrar procesos corporativos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 07 — CASOS Y SOLUCIONES -->
+        <section class="section case-studies-section" id="casos-de-exito">
+            <div class="section-head">
+                <div class="kicker"><span></span> 07 — CASOS Y SOLUCIONES</div>
+                <h2>Resultados reales a través de <em>soluciones bien diseñadas</em></h2>
+                <p>Ejemplos estructurados de cómo abordamos desafíos organizacionales complejos para transformarlos en valor tangible.</p>
+            </div>
+
+            <div class="cases-container">
+                <!-- Case 01 -->
+                <article class="case-card">
+                    <div class="case-header">
+                        <span class="case-number">CASO 01</span>
+                        <h3>Centralización de procesos empresariales</h3>
+                    </div>
+
+                    <div class="case-body-grid">
+                        <div class="case-block case-block-problem">
+                            <div class="block-tag"><span class="tag-icon">⚠️</span> PROBLEMA</div>
+                            <p>Información distribuida entre diferentes herramientas y procesos manuales.</p>
+                        </div>
+
+                        <div class="case-block case-block-solution">
+                            <div class="block-tag"><span class="tag-icon">💡</span> SOLUCIÓN</div>
+                            <p>Desarrollo de una plataforma centralizada para gestionar procesos, información, usuarios y trazabilidad.</p>
+                        </div>
+
+                        <div class="case-block case-block-tech">
+                            <div class="block-tag"><span class="tag-icon">⚙️</span> TECNOLOGÍA</div>
+                            <div class="tech-pills">
+                                <span>Aplicación web</span>
+                                <span>Base de datos</span>
+                                <span>Automatización</span>
+                                <span>Dashboards</span>
+                            </div>
+                        </div>
+
+                        <div class="case-block case-block-result">
+                            <div class="block-tag"><span class="tag-icon">🚀</span> RESULTADO</div>
+                            <p><strong>Mayor centralización, control y trazabilidad de la operación.</strong></p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 02 -->
+                <article class="case-card">
+                    <div class="case-header">
+                        <span class="case-number">CASO 02</span>
+                        <h3>Automatización e integración operativa</h3>
+                    </div>
+
+                    <div class="case-body-grid">
+                        <div class="case-block case-block-problem">
+                            <div class="block-tag"><span class="tag-icon">⚠️</span> PROBLEMA</div>
+                            <p>Carga de trabajo repetitiva en la captura y validación manual de datos entre plataformas.</p>
+                        </div>
+
+                        <div class="case-block case-block-solution">
+                            <div class="block-tag"><span class="tag-icon">💡</span> SOLUCIÓN</div>
+                            <p>Implementación de flujos de automatización e integración de APIs para sincronización de datos en tiempo real.</p>
+                        </div>
+
+                        <div class="case-block case-block-tech">
+                            <div class="block-tag"><span class="tag-icon">⚙️</span> TECNOLOGÍA</div>
+                            <div class="tech-pills">
+                                <span>APIs</span>
+                                <span>Power Automate</span>
+                                <span>Scripts</span>
+                                <span>Base de datos</span>
+                            </div>
+                        </div>
+
+                        <div class="case-block case-block-result">
+                            <div class="block-tag"><span class="tag-icon">🚀</span> RESULTADO</div>
+                            <p><strong>Reducción drástica de errores manuales y ahorro significativo de tiempo operativo.</strong></p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 03 -->
+                <article class="case-card">
+                    <div class="case-header">
+                        <span class="case-number">CASO 03</span>
+                        <h3>Inteligencia de datos y Business Intelligence</h3>
+                    </div>
+
+                    <div class="case-body-grid">
+                        <div class="case-block case-block-problem">
+                            <div class="block-tag"><span class="tag-icon">⚠️</span> PROBLEMA</div>
+                            <p>Falta de visibilidad ejecutiva sobre indicadores clave y demoras en reportes estratégicos.</p>
+                        </div>
+
+                        <div class="case-block case-block-solution">
+                            <div class="block-tag"><span class="tag-icon">💡</span> SOLUCIÓN</div>
+                            <p>Construcción de un ecosistema de BI con tableros interactivos e indicadores automatizados.</p>
+                        </div>
+
+                        <div class="case-block case-block-tech">
+                            <div class="block-tag"><span class="tag-icon">⚙️</span> TECNOLOGÍA</div>
+                            <div class="tech-pills">
+                                <span>Power BI</span>
+                                <span>Analítica de datos</span>
+                                <span>Dashboards</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="case-block case-block-result">
+                            <div class="block-tag"><span class="tag-icon">🚀</span> RESULTADO</div>
+                            <p><strong>Toma de decisiones informada, ágil y basada en datos en tiempo real.</strong></p>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
