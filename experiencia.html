@@ -3078,79 +3078,83 @@
             }
         }
 
-        @media(max-width:1050px) {
+        /* MOBILE & TABLET HERO (<900px) */
+        @media (max-width: 900px) {
+            .exp-red-field,
+            .exp-red-dots,
+            .exp-process-area {
+                display: none !important;
+            }
+
             .exp-final-hero {
                 height: auto !important;
-                min-height: 790px !important;
+                min-height: auto !important;
             }
 
             .exp-final-inner {
                 height: auto !important;
-                min-height: 790px !important;
+                min-height: auto !important;
                 grid-template-columns: 1fr !important;
                 gap: 0 !important;
-                padding-top: 48px !important;
+                padding: 35px 20px !important;
             }
 
             .exp-final-copy {
-                max-width: 700px !important
-            }
-
-            .exp-process-area {
-                justify-self: center !important;
-                transform: scale(.8) !important;
-                transform-origin: top center !important;
-                margin-bottom: -80px !important;
-            }
-
-            .exp-red-field {
-                top: 40% !important;
-                height: 72% !important;
-                width: 78% !important;
-            }
-        }
-
-        @media(max-width:600px) {
-            .exp-final-hero {
-                min-height: 880px !important;
-            }
-
-            .exp-final-inner {
-                min-height: 880px !important;
-                padding: 43px 20px 30px !important;
+                max-width: 100% !important;
+                width: 100% !important;
             }
 
             .exp-final-copy h1 {
-                font-size: 42px !important
+                font-size: 34px !important;
+                line-height: 1.1 !important;
             }
 
-            .exp-final-copy>p {
-                font-size: 9px !important
+            .exp-final-copy > p {
+                font-size: 14px !important;
+                line-height: 1.55 !important;
+                color: rgba(255, 255, 255, 0.85) !important;
             }
 
             .exp-stats {
                 grid-template-columns: repeat(2, 1fr) !important;
-                gap: 9px !important;
+                gap: 12px !important;
+                margin: 20px 0 !important;
             }
 
             .exp-stat {
                 border-right: 0 !important;
-                padding: 0 !important;
+                padding: 10px !important;
+                background: rgba(255, 255, 255, 0.04) !important;
+                border-radius: 8px !important;
             }
 
-            .exp-process-area {
-                width: 565px !important;
-                height: 380px !important;
-                transform: scale(.57) !important;
-                transform-origin: top left !important;
-                margin-bottom: -160px !important;
+            .exp-final-cta {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-top: 15px !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .exp-final-inner {
+                padding: 28px 16px !important;
             }
 
-            .exp-red-field {
-                top: 58% !important;
-                right: -28% !important;
-                width: 110% !important;
-                height: 47% !important;
+            .exp-final-copy h1 {
+                font-size: 28px !important;
+                line-height: 1.15 !important;
+            }
+
+            .exp-stats {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 8px !important;
+            }
+
+            .exp-final-cta {
+                width: 100% !important;
+                box-sizing: border-box !important;
+                text-align: center !important;
             }
         }
     </style>
