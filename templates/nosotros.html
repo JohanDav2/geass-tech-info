@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Conoce la historia, visión, misión y valores de Geass Tech. Desarrollo de software empresarial y transformación digital.">
+  <title>Nuestra Empresa | Geass Tech</title>
+  <style>
+    :root {
+      --black: #09090b;
+      --black2: #10090b;
+      --red: #8c1724;
+      --red2: #c13b4a;
+      --red3: #e04055;
+      --paper: #f8f6f6;
+      --white: #fff;
+      --text: #211719;
+      --muted: #777178;
+      --line: #ded8d9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--text);
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP PROMO BANNER */
+    .promo {
+      height: 42px;
+      background: linear-gradient(90deg, #8c1724, #a52231, #6f111d);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 13px;
+      position: relative;
+      padding: 0 50px 0 15px;
+      transition: all 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .promo-badge {
+      font-weight: 800;
+      letter-spacing: .04em;
+      background: rgba(255, 255, 255, .17);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .promo-close {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+      opacity: .85;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      user-select: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .promo-close:hover {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.15);
+    }
+
+    /* NAVBAR UNIFICADA */
+    .nav {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      background: #fff;
+      border-bottom: 1px solid #edf0f6;
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      color: #19191c;
+      white-space: nowrap;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #c8192d 0%, #8c1724 60%, #5a0e18 100%);
+      box-shadow: 0 6px 20px rgba(140, 23, 36, .40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-mark img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-left: auto;
+      margin-right: 30px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: #203560;
+      text-decoration: none;
+      transition: color .2s ease;
+      position: relative;
+      padding: 4px 0;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #8c1724;
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #8c1724;
+      border-radius: 2px;
+    }
+
+    .mobile-only-link {
+      display: none !important;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 4px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .btn-outline {
+      background: #fff;
+      border: 1px solid #8c1724;
+      color: #8c1724;
+    }
+
+    .btn-primary {
+      background: #8c1724;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(140, 23, 36, .25);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 34px;
+      height: 32px;
+      z-index: 101;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .nav-toggle:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #19191c;
+      border-radius: 2px;
+      margin: 3px auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        padding: 0 20px;
+        height: 62px;
+      }
+
+      .btn-outline {
+        display: none;
+      }
+
+      .mobile-only-link {
+        display: flex !important;
+        color: #8c1724 !important;
+        font-weight: 700;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 10px 16px 18px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+        border-bottom: 1px solid #edf0f6;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+        z-index: 99;
+        box-sizing: border-box;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        padding: 12px 14px;
+        font-size: 15px;
+        border-bottom: 1px solid #f0f2f7;
+        color: #19191c;
+        border-radius: 6px;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: none;
+      }
+
+      .nav-links a.active::after {
+        display: none;
+      }
+
+      .nav-links a.active {
+        color: #8c1724;
+        font-weight: 800;
+        background: rgba(140, 23, 36, 0.05);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav {
+        padding: 0 12px;
+        height: 58px;
+      }
+
+      .brand {
+        font-size: 16px;
+        gap: 8px;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+      }
+
+      .brand-mark img {
+        width: 22px;
+        height: 22px;
+      }
+
+      .nav-actions {
+        gap: 6px;
+      }
+
+      .nav-actions .btn-primary {
+        padding: 7px 11px;
+        font-size: 11px;
+        border-radius: 4px;
+      }
+    }
+
+    /* HERO NOSOTROS */
+    .gt-hero {
+      position: relative;
+      background: radial-gradient(circle at 82% 42%, rgba(140, 23, 36, .35), transparent 35%), linear-gradient(115deg, #07080a 0%, #10090b 58%, #18090d 100%);
+      color: #fff;
+      padding: 85px 30px 75px;
+      overflow: hidden;
+      border-bottom: 1px solid #2d1419;
+    }
+
+    .gt-container {
+      width: min(1180px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    .gt-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .42fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gt-hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #e04055;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .gt-hero-kicker:before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: #c13b4a;
+    }
+
+    .gt-hero-copy h1 {
+      font-size: clamp(44px, 5.5vw, 68px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 850;
+      color: #fff;
+      margin: 0;
+    }
+
+    .gt-hero-copy h1 em {
+      color: #e04055;
+      font-style: normal;
+    }
+
+    .gt-hero-desc {
+      max-width: 640px;
+      color: #bfaeb2;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 22px;
+    }
+
+    .gt-hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .gt-primary-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #8c1724;
+      color: #fff;
+      border-radius: 6px;
+      padding: 14px 24px;
+      font-size: 13px;
+      font-weight: 900;
+      transition: all .2s ease;
+      box-shadow: 0 10px 25px rgba(140, 23, 36, .35);
+    }
+
+    .gt-primary-btn:hover {
+      background: #c13b4a;
+      transform: translateY(-2px);
+    }
+
+    .gt-hero-right {
+      border-left: 1px solid rgba(255, 255, 255, .15);
+      padding-left: 32px;
+    }
+
+    .gt-hero-card {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 12px;
+      padding: 28px 24px;
+      backdrop-filter: blur(10px);
+    }
+
+    .gt-hero-card strong {
+      display: block;
+      color: #e04055;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      margin-bottom: 10px;
+    }
+
+    .gt-hero-card p {
+      color: #d6c7ca;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    /* SECCIONES DE CONTENIDO */
+    .gt-section {
+      padding: 85px 0;
+    }
+
+    .gt-kicker {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #8c1724;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .gt-kicker:before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: #c13b4a;
+    }
+
+    .gt-title {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      color: #1a1214;
+      margin: 0;
+      font-weight: 850;
+    }
+
+    .gt-title em {
+      color: #8c1724;
+      font-style: normal;
+    }
+
+    .gt-lead {
+      color: #6d6467;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 14px;
+      max-width: 680px;
+    }
+
+    /* PILARES / QUIÉNES SOMOS */
+    .gt-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .gt-pillar {
+      background: #fff;
+      border: 1px solid #e5dfe0;
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .03);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      position: relative;
+    }
+
+    .gt-pillar:hover {
+      transform: translateY(-4px);
+      border-color: #d9b8bd;
+      box-shadow: 0 16px 36px rgba(140, 23, 36, .09);
+    }
+
+    .gt-pillar .num {
+      color: #8c1724;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .gt-pillar .circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #f7e9eb;
+      color: #8c1724;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 900;
+      margin: 18px 0 20px;
+    }
+
+    .gt-pillar h3 {
+      font-size: 19px;
+      line-height: 1.25;
+      color: #1d1416;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .gt-pillar p {
+      color: #6a6164;
+      font-size: 13.5px;
+      line-height: 1.65;
+    }
+
+    /* PROPÓSITO */
+    .gt-purpose {
+      background: #fff;
+      border-top: 1px solid #e5dfe0;
+      border-bottom: 1px solid #e5dfe0;
+    }
+
+    .gt-purpose-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .gt-purpose-statement {
+      font-size: 24px;
+      line-height: 1.35;
+      letter-spacing: -.03em;
+      color: #1a1214;
+      font-weight: 800;
+      border-left: 3px solid #8c1724;
+      padding-left: 20px;
+      margin-bottom: 18px;
+    }
+
+    .gt-purpose-statement span {
+      color: #8c1724;
+    }
+
+    .gt-purpose-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #eae4e5;
+    }
+
+    .gt-purpose-stat strong {
+      display: block;
+      color: #8c1724;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      margin-bottom: 5px;
+    }
+
+    .gt-purpose-stat small {
+      color: #70676a;
+      font-size: 11.5px;
+      line-height: 1.5;
+      display: block;
+    }
+
+    /* MISIÓN / VISIÓN TARJETAS DESTACADAS */
+    .gt-mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .gt-mv-card {
+      background: #fff;
+      border: 1px solid #e5dfe0;
+      border-radius: 14px;
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .03);
+    }
+
+    .gt-mv-card.dark {
+      background: linear-gradient(145deg, #10090b 0%, #1a0b0f 60%, #280e14 100%);
+      color: #fff;
+      border-color: #3b161c;
+    }
+
+    .gt-mv-card .tag {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      color: #8c1724;
+      margin-bottom: 14px;
+    }
+
+    .gt-mv-card.dark .tag {
+      color: #e04055;
+    }
+
+    .gt-mv-card h3 {
+      font-size: 23px;
+      line-height: 1.2;
+      letter-spacing: -.03em;
+      margin-bottom: 14px;
+      font-weight: 850;
+    }
+
+    .gt-mv-card p {
+      color: #6a6164;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .gt-mv-card.dark p {
+      color: #c9bcbe;
+    }
+
+    /* OBJETIVOS */
+    .gt-objectives {
+      background: #faf7f7;
+    }
+
+    .gt-centered {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .gt-centered .gt-kicker {
+      justify-content: center;
+    }
+
+    .gt-centered .gt-kicker:before {
+      display: none;
+    }
+
+    .gt-objective-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .gt-objective {
+      background: #fff;
+      border: 1px solid #e5dfe0;
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: all .2s ease;
+    }
+
+    .gt-objective:hover {
+      border-color: #8c1724;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(140, 23, 36, .08);
+    }
+
+    .gt-objective .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #f7e9eb;
+      color: #8c1724;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 900;
+      margin: 0 auto 16px;
+    }
+
+    .gt-objective h3 {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      color: #1a1214;
+      margin-bottom: 8px;
+    }
+
+    .gt-objective p {
+      color: #70676a;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    /* VALORES */
+    .gt-values {
+      background: #fff;
+    }
+
+    .gt-values-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .gt-value {
+      border: 1px solid #e5dfe0;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      background: #fff;
+      transition: all .2s ease;
+    }
+
+    .gt-value:hover {
+      border-color: #c13b4a;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .05);
+    }
+
+    .gt-value .icon {
+      font-size: 20px;
+      color: #8c1724;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+      background: #fdf5f6;
+      border: 1px solid #f2d4d8;
+    }
+
+    .gt-value h3 {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      color: #1d1416;
+      margin-bottom: 8px;
+    }
+
+    .gt-value p {
+      font-size: 12px;
+      line-height: 1.55;
+      color: #70676a;
+    }
+
+    /* FILOSOFÍA Y FUTURO DUO */
+    .gt-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid #e5dfe0;
+    }
+
+    .gt-philosophy {
+      background: #10090b;
+      color: #fff;
+      padding: 75px 50px 75px max(30px, calc((100vw - 1180px) / 2 + 30px));
+    }
+
+    .gt-philosophy .gt-kicker {
+      color: #f2a0a9;
+    }
+
+    .gt-philosophy .gt-title {
+      color: #fff;
+    }
+
+    .gt-philosophy .gt-lead {
+      color: #bfaeb2;
+    }
+
+    .gt-checks {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .gt-check {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: #e5dedf;
+      font-size: 13.5px;
+    }
+
+    .gt-check i {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #8c1724;
+      display: grid;
+      place-items: center;
+      font-style: normal;
+      font-size: 11px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .gt-future {
+      background: #fff;
+      padding: 75px max(30px, calc((100vw - 1180px) / 2 + 30px)) 75px 50px;
+    }
+
+    .gt-future-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .gt-future-card {
+      border: 1px solid #e5dfe0;
+      border-radius: 10px;
+      padding: 22px 18px;
+      background: #faf7f7;
+    }
+
+    .gt-future-card b {
+      font-size: 10px;
+      color: #8c1724;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+
+    .gt-future-card h3 {
+      font-size: 15px;
+      margin-top: 10px;
+      color: #1a1214;
+    }
+
+    .gt-future-card p {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #70676a;
+      margin-top: 6px;
+    }
+
+    /* COMPROMISO */
+    .gt-commit {
+      background: linear-gradient(135deg, #8c1724 0%, #70111c 60%, #540b13 100%);
+      color: #fff;
+      padding: 75px 0;
+    }
+
+    .gt-commit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .gt-commit .gt-kicker {
+      color: #f2a0a9;
+    }
+
+    .gt-commit .gt-kicker:before {
+      background: #f2a0a9;
+    }
+
+    .gt-commit h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .gt-commit .gt-lead {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .gt-commit-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .gt-stat {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 10px;
+      padding: 22px 18px;
+    }
+
+    .gt-stat strong {
+      display: block;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      margin-bottom: 6px;
+    }
+
+    .gt-stat span {
+      color: rgba(255, 255, 255, .8);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* BANNER DE MARCA (UNIFICADO) */
+    .brand-banner {
+      position: relative;
+      overflow: hidden;
+      background: #10090b;
+      color: #fff;
+      padding: 58px 30px;
+      border-top: 1px solid #281316;
+      border-bottom: 1px solid #281316;
+    }
+
+    .brand-banner-glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -160px;
+      top: -210px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(193, 59, 74, .28), transparent 68%);
+    }
+
+    .brand-banner-inner {
+      width: min(1120px, 100%);
+      margin: auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 68px 1fr auto;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .brand-banner-mark {
+      width: 68px;
+      height: 68px;
+      border-radius: 17px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #c13b4a, #71121d);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(140, 23, 36, .24);
+    }
+
+    .brand-banner-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #c88992;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .brand-banner-kicker span {
+      width: 21px;
+      height: 2px;
+      background: #c13b4a;
+    }
+
+    .brand-banner-copy h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .brand-banner-copy h2 em {
+      color: #e04055;
+      font-style: normal;
+    }
+
+    .brand-banner-copy p {
+      margin: 10px 0 0;
+      max-width: 650px;
+      color: #b9adb0;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .brand-banner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 13px 22px;
+      border: 1px solid #6d3b43;
+      border-radius: 6px;
+      color: #fff;
+      background: rgba(255, 255, 255, .025);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: .2s ease;
+    }
+
+    .brand-banner-btn span {
+      color: #e04055;
+      font-size: 17px;
+    }
+
+    .brand-banner-btn:hover {
+      background: #8c1724;
+      border-color: #8c1724;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #09090b;
+      color: #81777a;
+      padding: 20px 30px;
+      font-size: 11px;
+    }
+
+    .copyright {
+      width: min(1140px, 100%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* MEDIA QUERIES RESPONSIVAS */
+    @media (max-width: 1000px) {
+      .gt-hero-grid,
+      .gt-purpose-grid,
+      .gt-commit-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .gt-hero-right {
+        border-left: 0;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .15);
+        padding-top: 30px;
+      }
+
+      .gt-pillars,
+      .gt-mv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gt-objective-grid,
+      .gt-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gt-duo {
+        grid-template-columns: 1fr;
+      }
+
+      .gt-philosophy,
+      .gt-future {
+        padding: 60px 30px;
+      }
+
+      .brand-banner-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gt-hero {
+        padding: 55px 20px;
+      }
+
+      .gt-section {
+        padding: 60px 0;
+      }
+
+      .gt-objective-grid,
+      .gt-values-grid,
+      .gt-future-grid,
+      .gt-commit-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .copyright {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP PROMO BANNER -->
+  <div class="promo" id="promoBanner">
+    <span class="promo-badge">GEASS TECH</span>
+    <span>Transformamos procesos en soluciones digitales inteligentes</span>
+    <span class="promo-close" id="promoClose" aria-label="Cerrar aviso" title="Cerrar">×</span>
+  </div>
+
+  <!-- HEADER / NAVEGACIÓN UNIFICADA -->
+  <header class="nav">
+    <a class="brand" href="info-tech.html">
+      <span class="brand-mark"><img src="assets/icons/Logo_blanco_v2-solo icono.png" alt="Geass Tech logo"></span>
+      Geass Tech
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="info-tech.html">Soluciones</a>
+      <a href="experiencia.html">Experiencia</a>
+      <a href="nosotros.html" class="active">Nuestra empresa</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://johandav2.github.io/Geass-Tech/login.html" class="mobile-only-link">Iniciar sesión</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="https://johandav2.github.io/Geass-Tech/login.html">Iniciar sesión</a>
+      <a class="btn btn-primary" href="contacto.html">Comenzar</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="gt-page">
+
+    <!-- HERO SECTION -->
+    <section class="gt-hero">
+      <div class="gt-container gt-hero-grid">
+        <div class="gt-hero-copy">
+          <div class="gt-hero-kicker">NUESTRA EMPRESA</div>
+          <h1>Tecnología que<br>transforma <em>negocios.</em></h1>
+          <p class="gt-hero-desc">
+            En GEASS TECH desarrollamos soluciones tecnológicas que optimizan procesos,
+            conectan información y generan valor real para las organizaciones.
+          </p>
+          <div class="gt-hero-actions">
+            <a href="#quienes-somos" class="gt-primary-btn">CONOCE MÁS SOBRE NOSOTROS <span>→</span></a>
+          </div>
+        </div>
+        <div class="gt-hero-right">
+          <div class="gt-hero-card">
+            <strong>TECNOLOGÍA · NEGOCIO · EVOLUCIÓN</strong>
+            <p>Una visión empresarial de la tecnología: entender, transformar y construir para crecer de forma sólida y escalable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS / PILARES -->
+    <section class="gt-section" id="quienes-somos">
+      <div class="gt-container">
+        <div>
+          <div class="gt-kicker">QUIÉNES SOMOS</div>
+          <h2 class="gt-title">Somos <em>GEASS TECH.</em></h2>
+          <p class="gt-lead">
+            Una empresa de tecnología dedicada al diseño, desarrollo e implementación de soluciones digitales
+            que impulsan la eficiencia, la innovación y la evolución continua de las organizaciones.
+          </p>
+        </div>
+
+        <div class="gt-pillars">
+          <article class="gt-pillar">
+            <div class="num">01 / MISIÓN</div>
+            <div class="circle">◎</div>
+            <h3>Impulsar organizaciones mediante tecnología</h3>
+            <p>Diseñamos y desarrollamos soluciones que ayudan a optimizar procesos, automatizar actividades, aprovechar información y mejorar la toma de decisiones.</p>
+          </article>
+
+          <article class="gt-pillar">
+            <div class="num">02 / VISIÓN</div>
+            <div class="circle">◉</div>
+            <h3>Ser un aliado tecnológico para la evolución</h3>
+            <p>Buscamos consolidarnos como una empresa reconocida por crear soluciones innovadoras, útiles y adaptables para organizaciones en crecimiento.</p>
+          </article>
+
+          <article class="gt-pillar">
+            <div class="num">03 / PROPÓSITO</div>
+            <div class="circle">◇</div>
+            <h3>Hacer posible el cambio digital</h3>
+            <p>Convertimos necesidades empresariales en oportunidades para simplificar, conectar, automatizar y generar valor sostenible a largo plazo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPÓSITO -->
+    <section class="gt-section gt-purpose">
+      <div class="gt-container gt-purpose-grid">
+        <div>
+          <div class="gt-kicker">NUESTRO PROPÓSITO</div>
+          <h2 class="gt-title">Tecnología con <em>sentido.</em></h2>
+          <p class="gt-lead">
+            No desarrollamos tecnología por desarrollarla. La construimos para resolver necesidades reales,
+            mejorar la experiencia operativa y crear nuevas oportunidades estratégicas.
+          </p>
+          <div class="gt-purpose-bottom">
+            <div class="gt-purpose-stat">
+              <strong>PERSONAS</strong>
+              <small>Diseñamos pensando en quienes utilizan la solución diariamente.</small>
+            </div>
+            <div class="gt-purpose-stat">
+              <strong>NEGOCIO</strong>
+              <small>Partimos de objetivos y retos operacionales reales de la organización.</small>
+            </div>
+            <div class="gt-purpose-stat">
+              <strong>FUTURO</strong>
+              <small>Construimos plataformas preparadas para escalar y evolucionar.</small>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gt-purpose-statement">
+            Queremos que la tecnología deje de ser solo una herramienta y se convierta en un <span>motor de evolución constante.</span>
+          </div>
+          <p class="gt-lead">
+            Nuestro propósito es conectar estrategia, procesos e innovación para que las organizaciones
+            puedan hacer más, mejor y de una manera ágil y sostenible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECCIÓN ESTRATÉGICA (MISIÓN & VISIÓN DETALLADAS) -->
+    <section class="gt-section">
+      <div class="gt-container">
+        <div>
+          <div class="gt-kicker">DIRECCIÓN ESTRATÉGICA</div>
+          <h2 class="gt-title">Lo que somos hoy y hacia dónde <em>queremos llegar.</em></h2>
+        </div>
+
+        <div class="gt-mv-grid">
+          <article class="gt-mv-card">
+            <div class="tag">01 / MISIÓN CORPORATIVA</div>
+            <h3>Impulsar organizaciones mediante tecnología funcional</h3>
+            <p>
+              Diseñar, desarrollar e implementar soluciones digitales que ayuden a las organizaciones a optimizar sus procesos,
+              automatizar tareas repetitivas, consolidar su información y mejorar su capacidad de respuesta operativa y toma de decisiones.
+            </p>
+          </article>
+
+          <article class="gt-mv-card dark">
+            <div class="tag">02 / VISIÓN DE FUTURO</div>
+            <h3>Ser el aliado tecnológico referente para la evolución empresarial</h3>
+            <p>
+              Consolidarnos como una empresa altamente valorada por crear herramientas y plataformas tecnológicas útiles,
+              robustas y adaptables, capaces de acompañar a las organizaciones en cada etapa de su transformación.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section class="gt-section gt-objectives">
+      <div class="gt-container">
+        <div class="gt-centered">
+          <div class="gt-kicker">LO QUE QUEREMOS LOGRAR</div>
+          <h2 class="gt-title">Nuestros <em>objetivos.</em></h2>
+          <p class="gt-lead">
+            Nuestro crecimiento está ligado a nuestra capacidad de generar soluciones útiles,
+            relaciones de confianza duraderas y resultados tangibles en la operación de cada cliente.
+          </p>
+        </div>
+
+        <div class="gt-objective-grid">
+          <article class="gt-objective">
+            <div class="icon">↗</div>
+            <h3>TRANSFORMAR</h3>
+            <p>Impulsar la evolución digital continua de las organizaciones.</p>
+          </article>
+
+          <article class="gt-objective">
+            <div class="icon">▥</div>
+            <h3>OPTIMIZAR</h3>
+            <p>Generar eficiencia mediante procesos más simples e integrados.</p>
+          </article>
+
+          <article class="gt-objective">
+            <div class="icon">♙</div>
+            <h3>CONECTAR</h3>
+            <p>Construir alianzas estratégicas y relaciones de largo plazo.</p>
+          </article>
+
+          <article class="gt-objective">
+            <div class="icon">✦</div>
+            <h3>INNOVAR</h3>
+            <p>Explorar e incorporar nuevas posibilidades tecnológicas.</p>
+          </article>
+
+          <article class="gt-objective">
+            <div class="icon">◎</div>
+            <h3>IMPACTAR</h3>
+            <p>Crear valor sostenible para las organizaciones y sus equipos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="gt-section gt-values">
+      <div class="gt-container">
+        <div class="gt-centered">
+          <div class="gt-kicker">NUESTROS VALORES</div>
+          <h2 class="gt-title">Lo que nos <em>guía.</em></h2>
+        </div>
+
+        <div class="gt-values-grid">
+          <article class="gt-value">
+            <div class="icon">◆</div>
+            <h3>INTEGRIDAD</h3>
+            <p>Actuamos con honestidad, transparencia y responsabilidad en cada decisión.</p>
+          </article>
+
+          <article class="gt-value">
+            <div class="icon">★</div>
+            <h3>CALIDAD</h3>
+            <p>Buscamos la excelencia funcional y técnica en cada plataforma que entregamos.</p>
+          </article>
+
+          <article class="gt-value">
+            <div class="icon">◇</div>
+            <h3>COMPROMISO</h3>
+            <p>Nos involucramos activamente en los retos y objetivos de nuestros clientes.</p>
+          </article>
+
+          <article class="gt-value">
+            <div class="icon">✦</div>
+            <h3>INNOVACIÓN</h3>
+            <p>Transformamos ideas complejas en soluciones tecnológicas intuitivas.</p>
+          </article>
+
+          <article class="gt-value">
+            <div class="icon">♥</div>
+            <h3>COLABORACIÓN</h3>
+            <p>Creemos en el trabajo en equipo para alcanzar los mejores resultados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFÍA Y FUTURO DUO -->
+    <section class="gt-duo">
+      <div class="gt-philosophy">
+        <div class="gt-kicker">NUESTRA FILOSOFÍA</div>
+        <h2 class="gt-title">Principios de <em>trabajo.</em></h2>
+        <p class="gt-lead">La tecnología debe simplificar, conectar e impulsar el crecimiento.</p>
+        <div class="gt-checks">
+          <div class="gt-check"><i>✓</i><span>Entendemos el negocio y la operación antes de proponer código.</span></div>
+          <div class="gt-check"><i>✓</i><span>Diseñamos pensando en la experiencia del usuario y el impacto real.</span></div>
+          <div class="gt-check"><i>✓</i><span>Desarrollamos con altos estándares de calidad, seguridad y escalabilidad.</span></div>
+          <div class="gt-check"><i>✓</i><span>Acompañamos la puesta en marcha y la evolución continua.</span></div>
+          <div class="gt-check"><i>✓</i><span>Medimos, aprendemos y optimizamos constantemente.</span></div>
+        </div>
+      </div>
+
+      <div class="gt-future">
+        <div class="gt-kicker">HACIA DÓNDE VAMOS</div>
+        <h2 class="gt-title">Nuestro <em>futuro.</em></h2>
+        <p class="gt-lead">Queremos ser el aliado tecnológico preferido por las empresas que buscan crecer e innovar.</p>
+        <div class="gt-future-grid">
+          <article class="gt-future-card">
+            <b>01 / EXPANDIR</b>
+            <h3>Nuestro impacto</h3>
+            <p>Llevar nuestras capacidades de software y automatización a nuevos sectores e industrias.</p>
+          </article>
+
+          <article class="gt-future-card">
+            <b>02 / INNOVAR</b>
+            <h3>Nuevas posibilidades</h3>
+            <p>Incorporar IA, herramientas de datos y automatización avanzada cuando aporten valor.</p>
+          </article>
+
+          <article class="gt-future-card">
+            <b>03 / CONSTRUIR</b>
+            <h3>Soluciones duraderas</h3>
+            <p>Crear plataformas digitales sostenibles que evolucionen con las organizaciones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPROMISO -->
+    <section class="gt-commit">
+      <div class="gt-container gt-commit-grid">
+        <div>
+          <div class="gt-kicker">NUESTRO COMPROMISO</div>
+          <h2>Crear tecnología que tenga sentido.</h2>
+          <p class="gt-lead">
+            Nos comprometemos a entregar soluciones que transformen organizaciones, generen valor
+            y construyan bases sólidas para el futuro.
+          </p>
+        </div>
+        <div class="gt-commit-stats">
+          <div class="gt-stat">
+            <strong>PERSONAS</strong>
+            <span>Enfocados en quienes utilizan nuestras soluciones día a día.</span>
+          </div>
+          <div class="gt-stat">
+            <strong>RESULTADOS</strong>
+            <span>Orientados al impacto medible que genera la tecnología.</span>
+          </div>
+          <div class="gt-stat">
+            <strong>CALIDAD</strong>
+            <span>Comprometidos con sistemas estables, seguros y confiables.</span>
+          </div>
+          <div class="gt-stat">
+            <strong>INNOVACIÓN</strong>
+            <span>Impulsados por explorar constantemente mejores alternativas.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER DE MARCA (UNIFICADO CON SOLUCIONES & CONTACTO) -->
+    <section class="brand-banner">
+      <div class="brand-banner-glow"></div>
+      <div class="brand-banner-inner">
+        <div class="brand-banner-mark">GT</div>
+        <div class="brand-banner-copy">
+          <div class="brand-banner-kicker"><span></span> GEASS TECH</div>
+          <h2>La tecnología que impulsa <em>tu siguiente paso.</em></h2>
+          <p>
+            Soluciones digitales pensadas para simplificar procesos, conectar información
+            y convertir los retos de tu organización en oportunidades.
+          </p>
+        </div>
+        <a class="brand-banner-btn" href="https://johandav2.github.io/Geass-Tech/login.html">
+          Ingresar a la plataforma <span>→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      <span>© 2026 Geass Tech. Todos los derechos reservados.</span>
+      <span>Soluciones digitales para empresas.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Promo Close Banner Script
+    document.addEventListener('DOMContentLoaded', function () {
+      const promoClose = document.getElementById('promoClose');
+      const promoBanner = document.getElementById('promoBanner');
+      if (promoClose && promoBanner) {
+        promoClose.addEventListener('click', function () {
+          promoBanner.style.display = 'none';
+        });
+      }
+
+      // Mobile Navigation Script
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const isOpen = navLinks.classList.toggle('open');
+          navToggle.classList.toggle('open', isOpen);
+          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        navLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
